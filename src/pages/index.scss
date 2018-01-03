@@ -1,0 +1,208 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand|Questrial);
+@import "../css/variables";
+// @import "intro-variables";
+// @import "sections/intro-hero";
+// @import "sections/intro-practice";
+// @import "sections/intro-app";
+// @import "sections/intro-features";
+
+#intro {
+  position:relative;
+
+  h2 {
+    margin: 0;
+  }
+
+  .hyphens {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .headline {
+    font-family: "Questrial", Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  button.cta {
+    border-radius: 20px;
+
+    span {
+      font-size: 1.3em;
+      line-height: 45px;
+      margin:0 1em;
+    }
+  }
+
+  .jumbo {
+    font-weight: bold;
+    font-size: 4.4em;
+    margin-bottom: 1em;
+  }
+
+  .intro-video {
+    margin-bottom: 3em;
+  }
+
+  .content {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+
+    .block {
+      max-width: $intro-block-width;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      padding: 150px 2em;
+      box-sizing: border-box;
+      font-weight: 100;
+    }
+  }
+
+  .concept {
+    width: 100%;
+    background-color: $black-bg-color;
+
+    &.white {
+      background-color: $white-bg-color;
+      color: $white-text;
+
+      .headline {
+        color: $white-headline;
+      }
+    }
+
+    &.purple {
+      background-color: $light-purple;
+      // color: $white-text;
+
+      .headline {
+        // color: $white-headline;
+      }
+    }
+
+    .content {
+      span.highlight {
+        color: black;
+        font-weight: 600;
+      }
+    }
+  }
+
+  /*
+    Animate section contents
+   */
+
+  .fromTopIn {
+    transition: transform 1.0s ease, opacity 1.0s ease;
+    transform: translate(0,0);
+    opacity: 1.0;
+  }
+
+  .fromTopOut {
+    transition: transform 1.0s ease, opacity 1.0s ease;
+
+    transform: translate(0,-50px);
+    opacity: 0.0;
+  }
+
+  .fromBottomIn {
+    transition: transform 1.0s ease, opacity 1.0s ease;
+    transform: translate(0,0);
+    opacity: 1.0;
+  }
+
+  .fromBottomOut {
+    transition: transform 1.0s ease, opacity 1.0s ease;
+
+    transform: translate(0,50px);
+    opacity: 0.0;
+  }
+}
+
+/**
+ * Small + Medium layout
+ */
+
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+  #intro {
+  }
+}
+
+/**
+ * Small layout
+ */
+
+@media only screen and (min-width: 0) and (max-width: 600px) {
+  #intro {
+    .content {
+      .block {
+        padding: 3.5em 1.5em;
+
+        .jumbo {
+          font-size: 2em;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Browser fixes
+ */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.firefox {
+  #intro {
+    .headline {
+      -moz-osx-font-smoothing: auto;
+      // NB FF also support this
+      -webkit-text-stroke: 0.02em;
+      letter-spacing: -0.015em;
+    }
+  }
+}
+
+body.safari {
+  #intro {
+    .headline {
+      -webkit-font-smoothing: auto;
+      -webkit-text-stroke: 0.04em;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      -webkit-text-stroke: 0.005em;
+    }
+  }
+
+  /* iPad */
+  @media only screen and (min-width: 601px) and (max-width: 960px) {
+    #intro {
+      .headline {
+        -webkit-text-stroke: 0.025em;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+
+
+  /* iPhone */
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    #intro {
+      .headline {
+        -webkit-text-stroke: 0.06em;
+        letter-spacing: -0.04em;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,180 @@
+@import "../css/variables";
+
+/**
+ * Hero
+ */
+
+#intro-hero {
+  background-color: red;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-color: $black-bg-color;
+
+  .content {
+    max-width: 790px;
+    width: 100%;
+    padding: 2em;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto auto;
+
+    h1 {
+      font-size: 3em;
+      line-height: 1.2em;
+      text-align: center;
+      margin: 70px auto 30px;
+      width: 100%;
+      text-align: center;
+
+      // background: linear-gradient(to right, #1de9b6, #5192ff);
+      // background: linear-gradient(to right, #ccc, #fff, #ccc);
+      // -webkit-background-clip: text;
+      // background-clip: text;
+      // color: transparent;
+      color: #fff;
+      text-shadow: 0px 0px 15px #666;
+
+      span {
+        color: #68fbfe;
+        text-shadow: 0px 0px 15px #019295;
+      }
+    }
+
+    div.ctas {
+      margin-bottom: 90px;
+
+      button {
+        margin: 0 1em;
+      }
+    }
+
+    img.logo {
+      width: 150px;
+    }
+
+    img.logo-type {
+      width: 130px;
+    }
+  }
+
+  a.scroll {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    span {
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      -webkit-animation: bounceArrow 1.5s infinite;
+      animation: bounceArrow 1.5s infinite;
+      box-sizing: border-box;
+    }
+  }
+  @-webkit-keyframes bounceArrow {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes bounceArrow {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+}
+
+/**
+ * Small + Medium layout
+ */
+
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+  #intro-hero {
+  }
+}
+
+/**
+ * Small layout
+ */
+
+@media only screen and (min-width: 0) and (max-width: 600px) {
+  #intro-hero {
+    .content {
+      height:100%;
+
+      h1 {
+        // Make headline break correctly
+        width: 300px;
+        font-size: 1.8em;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+
+      img.logo {
+        width: 120px;
+      }
+
+      img.logo-type {
+        width: 90px;
+      }
+
+      div.ctas {
+        margin-bottom: 25px;
+
+        button {
+          width: 100%;
+          margin: 0;
+
+          &:first-child {
+            margin-bottom: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Browser fixes
+ */
+
+body.safari {
+  /* iPhone */
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    #intro-hero {
+      .content {
+        h1 {
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
+}
+
