@@ -6,10 +6,12 @@ import './index.scss';
 
 // Sections
 import HeroSection from './../components/hero-section'
+import ProblemSection from './../components/problem-section';
 
 const IndexPage = () => (
   <Grid id="intro">
     <HeroSection />
+    <ProblemSection />
   </Grid>
 );
 

@@ -17,8 +17,8 @@ class HeroSection extends React.Component {
   }
 
   render() {
-    return <Row id="intro-hero" center="xs" middle="xs" style={{ backgroundImage: `url(${bgImage})` }}>
-        <Col xs={12} className="content">
+    return <Row id="intro-hero" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
+        <Col className="content" xs={12}>
           <img src={logoTransparent} className="logo" />
           <h1 className="headline">
             Effective practice that grows average into <span>
