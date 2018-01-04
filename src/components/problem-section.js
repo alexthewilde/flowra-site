@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
+import Chart from './chart';
 
 import './problem-section.scss';
 
@@ -14,7 +15,7 @@ class ProblemSection extends React.Component {
 
             <Row center="xs" top="xs">
               <Col xs={12} sm={6}>
-                <intro-chart name="uninspired" />
+                <Chart name="uninspired" />
               </Col>
               <Col className="text" xs={12} sm={6}>
                 <p className="hyphens">

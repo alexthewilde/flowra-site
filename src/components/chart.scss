@@ -1,0 +1,327 @@
+@import "../css/variables";
+
+$dark-bg-color: #222233;
+$dark-label-color: #60608f;
+$dark-line-color: #414161;
+$dark-icon-bg-color: #363652;
+
+$white-bg-color: #fafafa;
+$white-label-color: #ccc;
+$white-line-color: #ccc;
+$white-target-line-color: #ccc;
+$white-icon-bg-color: #bfbfbf;
+
+.intro-chart {
+  color: white;
+  position: relative;
+
+  div.growth-chart {
+    width: 400px;
+    height: 300px;
+    position: relative;
+
+    div.y-axis, div.x-axis {
+      font-size: 1.3em;
+      color: $dark-label-color;
+    }
+
+    div.y-axis {
+      position: absolute;
+      left:0px;
+      top:50%;
+
+      // Rotate by 90 degrees
+      -webkit-transform: rotate(-90deg) translateX(50%);
+      -moz-transform: rotate(-90deg) translateX(50%);
+      -ms-transform: rotate(-90deg) translateX(50%);
+      -o-transform: rotate(-90deg) translateX(50%);
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    }
+
+    div.x-axis {
+      position: absolute;
+      left:50%;
+      transform: translateX(-30%);
+      bottom:-5px;
+    }
+
+    div.stagnation {
+      position: absolute;
+      top: 20%;
+      left: 73px;
+
+      span {
+        font-size: 2.2em;
+        text-transform: uppercase;
+        color: $dark-bg-color;
+        padding: 10px 20px;
+        border-radius: 10px;
+        letter-spacing: 7px;
+        animation: pumpingRed 1s ease-out infinite;
+      }
+    }
+  }
+
+  .chart {
+    .ct-grid {
+      stroke: $dark-line-color;
+      stroke-dasharray: none;
+    }
+
+    .ct-label {
+      display: none;
+    }
+
+    .ct-line {
+      stroke-dasharray: 5px;
+      animation: dashoffset 1s linear infinite;
+    }
+
+    .ct-area.ct-threshold-below {
+      fill: #ccc;
+    }
+
+    .ct-target-line {
+      stroke: #ccc;
+      stroke-width: 1px;
+      stroke-dasharray: 8px;
+      shape-rendering: crispEdges;
+    }
+
+    // Point replacements
+
+    div.icon {
+      position: relative;
+      border-radius: 50%;
+      padding: 3px;
+      width: 20px;
+      height: 20px;
+      stroke-width: 0;
+
+      span {
+        position: absolute;
+        left: 31px;
+        top: 19px;
+        color: $dark-label-color;
+      }
+
+      i {
+        font-size: 13px;
+        transform: translateY(-1px);
+        color: $dark-bg-color;
+      }
+
+      &.check {
+        background-color: $dark-icon-bg-color;
+
+        &.growing {
+          background-color: $green;
+        }
+      }
+
+      &.question {
+        background-color: $red;
+
+        i {
+          color: $dark-bg-color;
+        }
+      }
+    }
+  }
+
+  &.uninspired {
+    .ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above {
+      stroke: $red;
+    }
+
+    .ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
+      stroke: $dark-line-color;
+    }
+  }
+}
+
+/**
+ * On white background
+ */
+
+.white {
+  .intro-chart {
+    $growing-color: #5192ff;
+
+    div.growth-chart {
+      div.y-axis, div.x-axis {
+        color: $white-label-color;
+      }
+    }
+
+    .chart {
+      .ct-grid {
+        stroke: $white-line-color;
+      }
+
+      .ct-area.ct-threshold-below {
+        fill: #ccc;
+      }
+
+      .ct-target-line {
+        stroke: $white-target-line-color;
+      }
+
+      // Point replacements
+
+      div.icon {
+        &.check {
+          background-color: $white-icon-bg-color;
+
+          i {
+            color: $white-bg-color;
+          }
+
+          &.growing {
+            background-color: $growing-color;
+          }
+        }
+      }
+    }
+
+    div.level-label {
+      position: absolute;
+      left: 61px;
+      color: $white-target-line-color;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &.basic {
+        top: 142px;
+      }
+
+      &.excellent {
+        top: 23px;
+      }
+    }
+
+    &.inspired {
+      .ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above {
+        stroke: $growing-color;
+      }
+
+      .ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
+        stroke: $white-line-color;
+      }
+
+      .ct-area.ct-threshold-above {
+        fill: $growing-color;
+      }
+
+      .chart {
+        div.icon {
+          &.question {
+            background-color: $white-icon-bg-color;
+
+            i {
+              color: $white-bg-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes dashoffset {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -20px;
+  }
+}
+
+@keyframes pumpingSize {
+  0% {
+    font-size: 1em;
+  }
+
+  50% {
+    font-size: 1.4em;
+  }
+
+  100% {
+    font-size: 1em;
+  }
+}
+
+@keyframes pumpingRed {
+  0% {
+    background-color: $red;
+  }
+
+  50% {
+    background-color: $dark-red;
+  }
+
+  100% {
+    background-color: $red;
+  }
+}
+
+
+/**
+ * Small + Medium layout
+ */
+
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+  .intro-chart {
+  }
+}
+
+/**
+ * Small layout
+ */
+
+@media only screen and (min-width: 0) and (max-width: 600px) {
+  .intro-chart {
+    div.growth-chart {
+      width: 320px;
+      height: 240px;
+
+      div.stagnation {
+        span {
+          font-size: 1.5em;
+          padding: 5px 10px;
+          border-radius: 5px;
+          letter-spacing: 4px;
+        }
+      }
+
+      div.x-axis, div.y-axis {
+        font-size: 1em;
+      }
+
+      div.level-label {
+        left: 58px;
+        font-size: 12px;
+
+        &.basic {
+          top: 110px;
+        }
+
+        &.excellent {
+          top: 20px;
+        }
+      }
+    }
+
+    .chart {
+      div.icon {
+        span {
+          font-size: .9em;
+        }
+      }
+    }
+  }
+}
+
+

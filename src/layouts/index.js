@@ -14,11 +14,14 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' }
       ]}
+      link={[
+        {
+          rel: 'stylesheet',
+          href: 'https://use.fontawesome.com/releases/v5.0.2/css/all.css'
+        }
+      ]}
     />
-    <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet" />
-    <div>
-      {children()}
-    </div>
+    <div>{children()}</div>
   </div>
 );
 

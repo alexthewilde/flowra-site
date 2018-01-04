@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
+import Chart from './chart';
 
 import './app-section.scss';
 
@@ -21,7 +22,7 @@ class AppSection extends React.Component {
               </Col>
 
               <Col xs={12} sm={6}>
-                <intro-chart name="inspired" />
+                <Chart name="inspired" />
               </Col>
             </Row>
           </div>
