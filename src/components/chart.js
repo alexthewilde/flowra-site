@@ -1,9 +1,11 @@
 import React from 'react';
 import Chartist from 'chartist';
-// Required to make the plugins load correctly 
-window.Chartist = Chartist;
-require('chartist-plugin-threshold');
-require('chartist-plugin-targetline');
+if (typeof window !== 'undefined') {
+  // Required to make the plugins load correctly 
+  window.Chartist = Chartist;
+  require('chartist-plugin-threshold');
+  require('chartist-plugin-targetline');
+}
 
 import './chart.scss';
 
@@ -73,10 +75,13 @@ const getPlugins = name => {
   let plugins = [
     Chartist.plugins.ctThreshold({
       threshold: 2.9,
+      // No longer needed with Gatsby (= no <base href="/" />).
+      // If needed, first make sure to use the alexthewilde fork.
+      // 
       // Fix for Safari to display clipping mask
-      basePath: window.is_safari
-        ? window.location.href.replace(window.location.hash, '')
-        : ''
+      // basePath: window.is_safari
+      //   ? window.location.href.replace(window.location.hash, '')
+      //   : ''
     })
   ];
 
@@ -151,6 +156,8 @@ const onDraw = (name, data) => {
 };
 
 const drawChart = (container, name) => {
+  if (!Chartist) return;
+
   config.chartOptions.plugins = getPlugins(name);
   let chart = new Chartist.Line(container, null, config.chartOptions, config.responsiveChartOptions);
   chart.on('draw', (data) => {

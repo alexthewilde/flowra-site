@@ -4,4 +4,13 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
- // You can delete this file if you're not using it
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  if (stage === 'build-html') {
+    // Exclude chartist packages (they break the build because of using the
+    // 'window' object.
+    config.loader('null', {
+      test: /chartist/,
+      loader: 'null-loader'
+    });
+  }
+};
