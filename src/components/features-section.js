@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
+import VideoPlayer from './video-player';
 
 import './features-section.scss';
 
@@ -16,7 +17,7 @@ class FeaturesSection extends React.Component {
             </div>
           </div>
 
-          <intro-video use-flowra-cb="ctrl.useFlowra()" />
+          <VideoPlayer />
         </Col>
       </Row>;
   }

@@ -1,0 +1,99 @@
+@import "../css/variables";
+
+@mixin intro-video-dimensions() {
+  max-width: 1000px;
+  width:100%;
+  // NB using a fixed height to prevent container from "jumping" on init
+  max-height: 563px;
+  min-height: 563px;
+}
+
+@mixin intro-video-dimensions-responsive() {
+  max-width: 1000px;
+  width:100%;
+  max-height: 563px;
+  min-height: initial;
+  height:100%;
+}
+
+.intro-video {
+  position: relative;
+  @include intro-video-dimensions();
+  background: white;
+  outline: none;
+  margin-top: 4em;
+
+  .plyr {
+    max-width: 1000px;
+    width: 100%;
+    max-height: 563px;
+    height: 100%;
+    margin: 0 auto;
+
+    .plyr__video-wrapper {
+      background: none;
+    }
+  }
+
+  .video-player {
+    @include intro-video-dimensions();
+  }
+}
+
+/**
+ * "Plyr" player customizations
+ */
+
+button.plyr__play-large {
+  background: $purple;
+  border-color: $purple;
+  padding: 20px;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $light-purple;
+    border-color: $light-purple;
+  }
+}
+
+.plyr__progress--played, .plyr__volume--display {
+  color: $light-purple;
+}
+
+.plyr--video .plyr__controls button.tab-focus:focus,
+.plyr--video .plyr__controls button:hover {
+  border: 1px solid red;
+  background: $light-purple;
+}
+
+/**
+ * Small + Medium layout
+ */
+
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+  .intro-video {
+    @include intro-video-dimensions-responsive();
+
+    button.plyr__play-large {
+      display: none;
+    }
+
+    .video-player {
+      @include intro-video-dimensions-responsive();
+    }
+  }
+}
+
+/**
+ * Small layout
+ */
+
+@media only screen and (min-width: 0) and (max-width: 600px) {
+  .intro-video {
+  }
+}

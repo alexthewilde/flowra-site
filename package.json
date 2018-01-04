@@ -12,6 +12,7 @@
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.15",
+    "plyr": "^2.0.18",
     "react-flexbox-grid": "^2.0.0"
   },
   "keywords": [
