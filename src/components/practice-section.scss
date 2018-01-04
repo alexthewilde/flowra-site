@@ -1,0 +1,49 @@
+@import "../css/variables";
+
+/**
+ * Practice
+ */
+
+#intro-practice {
+  position:relative;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-color: $black-bg-color;
+  box-shadow: inset 0 0 10px #000000;
+
+  .content {
+    .practice-time {
+      text-align: justify;
+      font-size: 2.1em;
+
+      p.highlight {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/**
+ * Small + Medium layout
+ */
+
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+  #intro-practice {
+  }
+}
+
+/**
+ * Small layout
+ */
+
+@media only screen and (min-width: 0) and (max-width: 600px) {
+  #intro-practice {
+    .content {
+      .practice-time {
+        font-size: 1.6em;
+      }
+    }
+  }
+}
+
