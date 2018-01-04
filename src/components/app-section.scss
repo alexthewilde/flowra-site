@@ -1,0 +1,67 @@
+@import "../css/variables";
+
+/**
+ * App
+ */
+
+#intro-app {
+  .content {
+    .headline {
+      background: linear-gradient(to right, $light-purple, #5192ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent!important;
+      margin-bottom: 1em;
+    }
+
+    .text {
+      color: #666;
+      font-size: 2em;
+      line-height: 1.5em;
+      text-align: left;
+      margin-right: 1em;
+
+      p {
+        margin-top: 0;
+
+        span.highlight {
+          color: $purple;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Medium layout
+ */
+
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+  #intro-app {
+  }
+}
+
+/**
+ * Small layout
+ */
+
+@media only screen and (min-width: 0) and (max-width: 600px) {
+  #intro-app {
+    .content {
+      .text {
+        font-size: 1.6em;
+        margin-right: 0;
+
+        p {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+          -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+          -moz-hyphens: auto;
+          hyphens: auto;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

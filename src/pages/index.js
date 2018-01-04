@@ -8,12 +8,13 @@ import './index.scss';
 import HeroSection from './../components/hero-section'
 import ProblemSection from './../components/problem-section';
 import PracticeSection from './../components/practice-section';
+import AppSection from './../components/app-section';
 
 const IndexPage = () => (
   <Grid id="intro">
     <HeroSection />
     <ProblemSection />
-    <PracticeSection />
+    <AppSection />
   </Grid>
 );
 

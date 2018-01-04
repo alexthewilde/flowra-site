@@ -1,0 +1,33 @@
+import React from 'react';
+import { Row, Col } from 'react-flexbox-grid';
+
+import './app-section.scss';
+
+class AppSection extends React.Component {
+  render() {
+    return <Row id="intro-app" className="concept white" center="xs" middle="xs">
+        <Col className="content" xs={12}>
+          <div className="block" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            <h2 className="headline jumbo">With a little help</h2>
+
+            <Row center="xs" top="xs">
+              <Col className="text" xs={12} sm={6}>
+                <p>
+                  Use flowra to <span className="highlight">
+                    craft highly effective practice sessions
+                  </span>
+                  that will help you grow as a performer.
+                </p>
+              </Col>
+
+              <Col xs={12} sm={6}>
+                <intro-chart name="inspired" />
+              </Col>
+            </Row>
+          </div>
+        </Col>
+      </Row>;
+  }
+}
+
+export default AppSection;
