@@ -10,13 +10,16 @@ import ProblemSection from './../components/problem-section';
 import PracticeSection from './../components/practice-section';
 import AppSection from './../components/app-section';
 import FeaturesSection from './../components/features-section';
+import PersonasSection from './../components/personas-section';
 
 const IndexPage = () => (
   <Grid id="intro">
     <HeroSection />
     <ProblemSection />
+    <PracticeSection />
     <AppSection />
     <FeaturesSection />
+    <PersonasSection />
   </Grid>
 );
 

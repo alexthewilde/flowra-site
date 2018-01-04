@@ -6,7 +6,7 @@ import './app-section.scss';
 class AppSection extends React.Component {
   render() {
     return <Row id="intro-app" className="concept white" center="xs" middle="xs">
-        <Col className="content" xs={12}>
+        <Col className="content">
           <div className="block" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
             <h2 className="headline jumbo">With a little help</h2>
 
