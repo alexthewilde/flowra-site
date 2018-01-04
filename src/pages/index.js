@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { Grid } from 'react-flexbox-grid';
 
 import './index.scss';
 
@@ -7,9 +8,9 @@ import './index.scss';
 import HeroSection from './../components/hero-section'
 
 const IndexPage = () => (
-  <div id="intro">
+  <Grid id="intro">
     <HeroSection />
-  </div>
+  </Grid>
 );
 
 export default IndexPage

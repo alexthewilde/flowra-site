@@ -1,4 +1,5 @@
 import React from 'react';
+import { Row, Col } from 'react-flexbox-grid';
 
 import './hero-section.scss'
 
@@ -7,9 +8,17 @@ import logoWhite from '../images/flowra-logo-white.png'
 import bgImage from '../images/aurora-borelias.jpg'
 
 class HeroSection extends React.Component {
+  useFlowra() {
+    console.log('use flowra');
+  }
+
+  watchVideo() {
+    console.log('watch video');
+  }
+
   render() {
-    return <div id="intro-hero" className="row start-xs middle-xs" style={{backgroundImage: `url(${bgImage})`}}>
-        <div className="content">
+    return <Row id="intro-hero" center="xs" middle="xs" style={{ backgroundImage: `url(${bgImage})` }}>
+        <Col xs={12} className="content">
           <img src={logoTransparent} className="logo" />
           <h1 className="headline">
             Effective practice that grows average into <span>
@@ -17,26 +26,26 @@ class HeroSection extends React.Component {
             </span>
           </h1>
 
-          <div className="ctas row center-xs middle-xs">
-            <div className="col-xs-12 col-sm-6">
-              <button className="cta">
+          <Row className="ctas" center="xs" middle="xs">
+            <Col xs={12} sm={6}>
+              <button className="cta" onClick={this.useFlowra}>
                 <span>use flowra</span>
               </button>
-            </div>
-            <div className="col-xs-12 col-sm-6">
-              <button className="">
+            </Col>
+            <Col xs={12} sm={6}>
+              <button className="" onClick={this.watchVideo}>
                 <span>watch video</span>
               </button>
-            </div>
-          </div>
+            </Col>
+          </Row>
 
           <img src={logoWhite} className="logo-type" />
-        </div>
+        </Col>
 
         <a href="#start" className="scroll">
           <span />
         </a>
-      </div>;
+      </Row>;
   }
 }
 
