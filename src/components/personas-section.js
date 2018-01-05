@@ -6,6 +6,10 @@ import './personas-section.scss';
 import bgImage from '../images/concert_bg.jpg';
 
 class PersonasSection extends React.Component {
+  useFlowra() {
+    console.log('use flowra')
+  }
+
   render() {
     return <Row id="intro-personas" className="personas" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
         <Col className="content" xs>
@@ -13,20 +17,20 @@ class PersonasSection extends React.Component {
             <h2 className="headline jumbo">Get started</h2>
 
             <div className="call-to-action">
-              <md-button className="md-raised md-primary cta" ng-click="ctrl.useFlowra()">
-                <span>Use flowra</span>
-              </md-button>
+              <a href="#" className="btn cta primary" onClick={this.useFlowra}>
+                Get flowra free
+              </a>
             </div>
 
             <Row center="xs" middle="xs">
-              <Col className="persona first-time" xs={12} sm={6}>
+              <Col className="persona first-time" xs={12} sm={5}>
                 <span className="sub">For first-time performers</span>
                 <strong className="headline">
                   Prepare for <br />your first gig
                 </strong>
               </Col>
 
-              <Col className="persona experienced" xs={12} sm={6}>
+              <Col className="persona experienced" xs={12} sm={5}>
                 <span className="sub">For experienced performers</span>
                 <strong className="headline">
                   Advance from<br />good to great

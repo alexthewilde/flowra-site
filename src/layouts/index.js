@@ -3,16 +3,15 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './../css/base.scss'
 import './../css/styles.scss';
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Flowra"
+      title="Flowra &ndash; Effective Practice"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' }
+        { name: 'description', content: 'Flowra effective music practice' },
+        { name: 'keywords', content: 'YouTube, practice, deep practice' }
       ]}
       link={[
         {

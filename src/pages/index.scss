@@ -1,10 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand|Questrial);
 @import "../css/variables";
-// @import "intro-variables";
-// @import "sections/intro-hero";
-// @import "sections/intro-practice";
-// @import "sections/intro-app";
-// @import "sections/intro-features";
+
+/**
+ * Landing page
+ */
 
 #intro {
   position:relative;
@@ -26,13 +25,48 @@
     font-family: "Questrial", Roboto, "Helvetica Neue", sans-serif;
   }
 
-  button.cta {
-    border-radius: 20px;
+  /**
+   * Call to action buttons
+   */
 
-    span {
-      font-size: 1.3em;
-      line-height: 45px;
-      margin:0 1em;
+  a.cta {
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter,transform;
+    transition-duration: .15s;
+    border-width: 0;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 600;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 10px rgba(0,0,0,0.16);
+    }
+
+    &.light {
+      background-color: transparent;
+      border: 2px solid #fff;
+      padding: 16px 46px 14px;
+
+      &:hover {
+        background-color: white;
+        color: $purple;
+      }
+    }
+
+    &.primary {
+      background-color: $purple;
+      color: white;
+      padding: 18px 48px 16px;
+
+      &:hover {
+        background-color: $light-purple;
+      }
     }
   }
 
@@ -138,6 +172,10 @@
 
 @media only screen and (min-width: 0) and (max-width: 600px) {
   #intro {
+    a.cta {
+      box-sizing: border-box;
+    }
+
     .content {
       .block {
         padding: 3.5em 1.5em;

@@ -13,15 +13,14 @@
   width:100%;
   max-height: 563px;
   min-height: initial;
-  height:100%;
 }
 
 .intro-video {
   position: relative;
   @include intro-video-dimensions();
-  background: white;
+  background: #fafafa;
   outline: none;
-  margin-top: 4em;
+  margin: 4em auto 0;
 
   .plyr {
     max-width: 1000px;
@@ -78,10 +77,6 @@ button.plyr__play-large {
 @media only screen and (min-width: 0px) and (max-width: 960px) {
   .intro-video {
     @include intro-video-dimensions-responsive();
-
-    button.plyr__play-large {
-      display: none;
-    }
 
     .video-player {
       @include intro-video-dimensions-responsive();

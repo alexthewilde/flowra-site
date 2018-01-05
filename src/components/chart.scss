@@ -73,6 +73,7 @@ $white-icon-bg-color: #bfbfbf;
     }
 
     .ct-line {
+      stroke-width: 4px;
       stroke-dasharray: 5px;
       animation: dashoffset 1s linear infinite;
     }
@@ -107,7 +108,6 @@ $white-icon-bg-color: #bfbfbf;
 
       i {
         font-size: 13px;
-        transform: translateY(-1px);
         color: $dark-bg-color;
       }
 
@@ -127,6 +127,11 @@ $white-icon-bg-color: #bfbfbf;
         }
       }
     }
+  }
+
+  .ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above,
+  .ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
+    fill: none;
   }
 
   &.uninspired {

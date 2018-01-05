@@ -14,7 +14,7 @@ import FeaturesSection from './../components/features-section';
 import PersonasSection from './../components/personas-section';
 
 const IndexPage = () => (
-  <Grid id="intro">
+  <Grid fluid id="intro">
     <HeroSection />
     <ProblemSection />
     <PracticeSection />

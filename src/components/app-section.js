@@ -12,16 +12,13 @@ class AppSection extends React.Component {
             <h2 className="headline jumbo">With a little help</h2>
 
             <Row center="xs" top="xs">
-              <Col className="text" xs={12} sm={6}>
+              <Col className="text" xs={12} sm={5}>
                 <p>
-                  Use flowra to <span className="highlight">
-                    craft highly effective practice sessions
-                  </span>
-                  that will help you grow as a performer.
+                  Use flowra to <span className="highlight">craft highly effective practice sessions</span> that will help you grow as a performer.
                 </p>
               </Col>
 
-              <Col xs={12} sm={6}>
+              <Col xs={12} sm={5}>
                 <Chart name="inspired" />
               </Col>
             </Row>

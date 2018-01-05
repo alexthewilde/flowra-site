@@ -27,15 +27,15 @@ class HeroSection extends React.Component {
           </h1>
 
           <Row className="ctas" center="xs" middle="xs">
-            <Col xs={12} sm={6}>
-              <button className="cta" onClick={this.useFlowra}>
-                <span>use flowra</span>
-              </button>
+            <Col xs={12} sm={6} className="end-sm">
+              <a href="#" className="btn cta primary" onClick={this.useFlowra}>
+                get flowra free
+              </a>
             </Col>
-            <Col xs={12} sm={6}>
-              <button className="" onClick={this.watchVideo}>
-                <span>watch video</span>
-              </button>
+            <Col xs={12} sm={6} className="start-sm">
+              <a href="#" className="btn cta light" onClick={this.watchVideo}>
+                watch video
+              </a>
             </Col>
           </Row>
 

@@ -31,7 +31,7 @@ class Chart extends React.Component {
             </div>
           )}
           {this.props.name === 'inspired' && (
-            <div className="level-label basic">Basic</div>
+            <div className="level-label basic">Mediocre</div>
           )}
           {this.props.name === 'inspired' && (
             <div className="level-label excellent">Excellent</div>
