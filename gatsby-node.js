@@ -6,10 +6,10 @@
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
   if (stage === 'build-html') {
-    // Exclude chartist packages (they break the build because of using the
-    // 'window' object.
+    // Exclude these packages (they break the build because of using the
+    // 'window' or 'document' object.
     config.loader('null', {
-      test: /chartist/,
+      test: /chartist|plyr/,
       loader: 'null-loader'
     });
   }
