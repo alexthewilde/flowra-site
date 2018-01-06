@@ -28,6 +28,9 @@
     max-height: 563px;
     height: 100%;
     margin: 0 auto;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 8px rgba(0,0,0,.3);
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
 
     .plyr__video-wrapper {
       background: none;
@@ -62,6 +65,16 @@ button.plyr__play-large {
 
 .plyr__progress--played, .plyr__volume--display {
   color: $light-purple;
+}
+
+.plyr--video .plyr__progress--buffer {
+  color: rgba(0, 0, 0, .15);
+  background-color: rgba(0, 0, 0, .15);
+}
+
+.plyr--video .plyr__controls {
+  background: linear-gradient(rgba(256, 256, 256, 0),rgba(256, 256, 256, 1));
+  color: #333;
 }
 
 .plyr--video .plyr__controls button.tab-focus:focus,
