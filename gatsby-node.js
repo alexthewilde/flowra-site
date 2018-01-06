@@ -9,7 +9,7 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
     // Exclude these packages (they break the build because of using the
     // 'window' or 'document' object.
     config.loader('null', {
-      test: /chartist|plyr/,
+      test: /chartist|plyr|smoothscroll-polyfill/,
       loader: 'null-loader'
     });
   }
