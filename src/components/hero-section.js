@@ -8,10 +8,6 @@ import logoWhite from '../images/flowra-logo-white.png'
 import bgImage from '../images/aurora-borelias.jpg'
 
 class HeroSection extends React.Component {
-  useFlowra() {
-    console.log('use flowra');
-  }
-
   watchVideo() {
     console.log('watch video');
   }
@@ -28,13 +24,13 @@ class HeroSection extends React.Component {
 
           <Row className="ctas" center="xs" middle="xs">
             <Col xs={12} sm={6} className="end-sm">
-              <a href="#" className="btn cta primary" onClick={this.useFlowra}>
-                get flowra free
+              <a href="#" className="btn cta light" onClick={this.watchVideo}>
+                watch video
               </a>
             </Col>
             <Col xs={12} sm={6} className="start-sm">
-              <a href="#" className="btn cta light" onClick={this.watchVideo}>
-                watch video
+              <a href="https://www.flowra.com/go" className="btn cta primary">
+                open flowra
               </a>
             </Col>
           </Row>
