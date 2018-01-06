@@ -10,8 +10,10 @@ import bgImage from '../images/aurora-borelias.jpg'
 class HeroSection extends React.Component {
   watchVideo() {
     document
-      .querySelector('#intro-problem')
+      .querySelector('#start')
       .scrollIntoView({
+        block: "start",
+        inline: "nearest",
         behavior: 'smooth'
       });
   }
