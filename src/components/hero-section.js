@@ -7,6 +7,9 @@ import logoTransparent from '../images/flowra-logo-transparent.png'
 import logoWhite from '../images/flowra-logo-white.png'
 import bgImage from '../images/aurora-borelias.jpg'
 
+// Pollyfill (required for Safari)
+require('smoothscroll-polyfill').polyfill();
+
 class HeroSection extends React.Component {
   watchVideo() {
     document
