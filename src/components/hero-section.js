@@ -27,7 +27,7 @@ class HeroSection extends React.Component {
   render() {
     return <Row id="intro-hero" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
         <Col className="content" xs={12}>
-          <img src={logoTransparent} className="logo" width="150" height="146" />
+          <img src={logoTransparent} className="logo" />
           <h1 className="headline">
             Effective practice that grows average into <span>
               stellar performers
@@ -47,7 +47,7 @@ class HeroSection extends React.Component {
             </Col>
           </Row>
 
-          <img src={logoWhite} className="logo-type" width="130" height="61" />
+          <img src={logoWhite} className="logo-type" />
         </Col>
 
         <a className="scroll" onClick={this.watchVideo}>
