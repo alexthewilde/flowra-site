@@ -9,7 +9,11 @@ import bgImage from '../images/aurora-borelias.jpg'
 
 class HeroSection extends React.Component {
   watchVideo() {
-    console.log('watch video');
+    document
+      .querySelector('#intro-problem')
+      .scrollIntoView({
+        behavior: 'smooth'
+      });
   }
 
   render() {
@@ -24,8 +28,8 @@ class HeroSection extends React.Component {
 
           <Row className="ctas" center="xs" middle="xs">
             <Col xs={12} sm={6} className="end-sm">
-              <a href="#" className="btn cta light" onClick={this.watchVideo}>
-                watch video
+              <a className="btn cta light" onClick={this.watchVideo}>
+                learn more
               </a>
             </Col>
             <Col xs={12} sm={6} className="start-sm">
@@ -38,7 +42,7 @@ class HeroSection extends React.Component {
           <img src={logoWhite} className="logo-type" />
         </Col>
 
-        <a href="#start" className="scroll">
+        <a className="scroll" onClick={this.watchVideo}>
           <span />
         </a>
       </Row>;

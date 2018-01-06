@@ -6,10 +6,6 @@ import './personas-section.scss';
 import bgImage from '../images/concert_bg.jpg';
 
 class PersonasSection extends React.Component {
-  useFlowra() {
-    console.log('use flowra')
-  }
-
   render() {
     return <Row id="intro-personas" className="personas" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
         <Col className="content" xs>
@@ -17,8 +13,8 @@ class PersonasSection extends React.Component {
             <h2 className="headline jumbo">Get started</h2>
 
             <div className="call-to-action">
-              <a href="#" className="btn cta primary" onClick={this.useFlowra}>
-                Get flowra free
+              <a href="https://www.flowra.com/go" className="btn cta primary">
+                open flowra
               </a>
             </div>
 
