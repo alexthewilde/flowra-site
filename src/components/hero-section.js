@@ -12,8 +12,9 @@ class HeroSection extends React.Component {
     document
       .querySelector('#start')
       .scrollIntoView({
-        block: "start",
-        inline: "nearest",
+        // Scroll exactly to top of target element
+        block: 'start',
+        inline: 'nearest',
         behavior: 'smooth'
       });
   }

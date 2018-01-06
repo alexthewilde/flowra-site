@@ -10,22 +10,22 @@ if (typeof window !== 'undefined') {
     window.is_safari = false;
   }
 
-  window.document.addEventListener('DOMContentLoaded', function() {
-    let trigger;
-    const body = document.querySelector('body');
-    if (window.is_chrome) {
-      body.className += ' chrome';
-    }
-    if (window.is_safari) {
-      body.className += ' safari';
-    }
-    if (window.is_firefox) {
-      body.className += ' firefox';
-    }
-    if (window.is_explorer) {
-      body.className += ' ie';
-    }
+  const body = document.querySelector('body');
+  if (window.is_chrome) {
+    body.className += ' chrome';
+  }
+  if (window.is_safari) {
+    body.className += ' safari';
+  }
+  if (window.is_firefox) {
+    body.className += ' firefox';
+  }
+  if (window.is_explorer) {
+    body.className += ' ie';
+  }
 
+  let trigger;
+  window.document.addEventListener('DOMContentLoaded', function() {
     //
     // Scroll animations
     //

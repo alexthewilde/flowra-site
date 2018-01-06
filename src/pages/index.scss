@@ -43,30 +43,23 @@
     white-space: normal;
     font-weight: 600;
 
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 10px rgba(0,0,0,0.16);
-    }
-
     &.light {
       background-color: transparent;
       border: 2px solid #fff;
       padding: 16px 46px 14px;
-
-      &:hover {
-        background-color: white;
-        color: $purple;
-      }
     }
 
     &.primary {
       background-color: $purple;
       color: white;
       padding: 18px 48px 16px;
+    }
 
-      &:hover {
-        background-color: $light-purple;
-      }
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 10px rgba(0,0,0,0.16);
+      background-color: white;
+      color: $purple;
     }
   }
 
