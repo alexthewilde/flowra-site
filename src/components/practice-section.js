@@ -19,10 +19,10 @@ class PracticeSection extends React.Component {
               </p>
               <ol>
                 <li className="hyphens">
-                  find something to improve in a performance
+                  Find something to improve in a performance
                 </li>
                 <li className="hyphens">
-                  focus rigorously until you master all details
+                  Focus rigorously until you master all details
                 </li>
               </ol>
               <p className="hyphens">
