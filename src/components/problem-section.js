@@ -23,9 +23,8 @@ class ProblemSection extends React.Component {
                   out of clear practice tasks.
                 </p>
                 <p className="hyphens">
-                  Instead of working deliberately on performance details
-                  during practice, you're mindlessly playing song after song
-                  without getting any better.
+                  You're mindlessly playing song after song
+                  without getting better anymore.
                 </p>
               </Col>
             </Row>

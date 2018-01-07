@@ -15,13 +15,15 @@ class PracticeSection extends React.Component {
 
             <div className="practice-time">
               <p className="hyphens">
-                The best performers obsess about what and how they practice:
-                they look for something to improve in their performance and
-                then focus rigorously on it.
+                The best performers are masters of effective practice:
+              </p>
+              <p className="hyphens">
+                Look for something to improve in
+                your performance and then focus rigorously on it.
               </p>
               <p className="hyphens highlight">
-                This effectiveness during practice is what separates
-                outstanding from average performers.
+                Over time effective practice makes anyone grow from average to
+                outstanding performer.
               </p>
             </div>
           </div>

@@ -5,21 +5,31 @@ import VideoPlayer from './video-player';
 import './features-section.scss';
 
 class FeaturesSection extends React.Component {
+  // block - margin-bottom:0
+  // video
+  // block - margin-top:0
   render() {
-    return <Row id="video">
-        <Col data-scroll="toggle(.fromBottomIn, .fromBottomOut)" xs>
-          <div>
-            <h2 className="headline">Loop. Record. Compare.</h2>
-            <div className="text">
-              <p className="hyphens">
-                Flowra gives you all the tools you need for deep practice.
-              </p>
+    return <div id="intro-video">
+        <Row className="concept white top" center="xs" middle="xs">
+          <Col className="content" xs={12}>
+            <div className="block" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+              <h2 className="headline jumbo">Loop. Record. Compare.</h2>
             </div>
-          </div>
-
-          <VideoPlayer />
-        </Col>
-      </Row>;
+          </Col>
+        </Row>
+        <VideoPlayer />
+        <Row className="concept white bottom" center="xs" middle="xs">
+          <Col className="content" xs={12}>
+            <div className="block">
+              <div className="text">
+                <p className="hyphens">
+                  Flowra gives you all the tools you need for deep practice.
+                </p>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </div>;
   }
 }
 

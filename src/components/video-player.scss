@@ -20,7 +20,7 @@
   @include intro-video-dimensions();
   background: #fafafa;
   outline: none;
-  margin: 4em auto 0;
+  margin: 2em auto 0;
 
   .plyr {
     max-width: 1000px;
@@ -102,5 +102,8 @@ button.plyr__play-large {
 
 @media only screen and (min-width: 0) and (max-width: 600px) {
   .intro-video {
+    .plyr {
+      border-radius: 0;
+    }
   }
 }

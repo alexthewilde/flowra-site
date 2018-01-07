@@ -14,11 +14,15 @@
 
   .content {
     .practice-time {
-      text-align: justify;
       font-size: 2.1em;
 
       p.highlight {
-        font-weight: 600;
+        color: #fff;
+        background-color: #222233;
+        padding: 0.5em 1em;
+        margin-left: -1em;
+        margin-right: -1em;
+        box-shadow: 0 0 10px #000;
       }
     }
   }
@@ -30,6 +34,16 @@
 
 @media only screen and (min-width: 0px) and (max-width: 960px) {
   #intro-practice {
+    .content {
+      .practice-time {
+        p.highlight {
+          padding-left: 0.7em;
+          padding-right: 0.7em;
+          margin-left: -0.7em;
+          margin-right: -0.7em;
+        }
+      }
+    }
   }
 }
 
@@ -41,7 +55,7 @@
   #intro-practice {
     .content {
       .practice-time {
-        font-size: 1.6em;
+        font-size: 1.3em;
       }
     }
   }
