@@ -15,7 +15,9 @@
     "gatsby-plugin-sass": "^1.0.15",
     "plyr": "^2.0.18",
     "react-flexbox-grid": "^2.0.0",
-    "smoothscroll-polyfill": "^0.4.0"
+    "smoothscroll-polyfill": "^0.4.0",
+    "typeface-questrial": "^0.0.44",
+    "typeface-quicksand": "^0.0.44"
   },
   "keywords": [
     "gatsby"
