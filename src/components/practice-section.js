@@ -7,7 +7,7 @@ import bgImage from '../images/instruments.jpg';
 class PracticeSection extends React.Component {
   render() {
     return <Row id="intro-practice" className="concept" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
-        <Col id="start" className="content" xs={12}>
+        <Col id="start" className="content" xs={10} lg={8}>
           <div className="block" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
             <h2 className="headline jumbo">
               Practice smarter,<br />not more
@@ -17,13 +17,17 @@ class PracticeSection extends React.Component {
               <p className="hyphens">
                 The best performers are masters of effective practice:
               </p>
+              <ol>
+                <li className="hyphens">
+                  find something to improve in a performance
+                </li>
+                <li className="hyphens">
+                  focus rigorously until you master all details
+                </li>
+              </ol>
               <p className="hyphens">
-                Look for something to improve in
-                your performance and then focus rigorously on it.
-              </p>
-              <p className="hyphens highlight">
-                Over time effective practice makes anyone grow from average to
-                outstanding performer.
+                Over time, effective practice makes anyone grow from average
+                to outstanding performer.
               </p>
             </div>
           </div>

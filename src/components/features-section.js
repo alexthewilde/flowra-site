@@ -11,7 +11,7 @@ class FeaturesSection extends React.Component {
   render() {
     return <div id="intro-video">
         <Row className="concept white top" center="xs" middle="xs">
-          <Col className="content" xs={12}>
+          <Col className="content" xs={10}>
             <div className="block" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
               <h2 className="headline jumbo">Loop. Record. Compare.</h2>
             </div>
@@ -19,7 +19,7 @@ class FeaturesSection extends React.Component {
         </Row>
         <VideoPlayer />
         <Row className="concept white bottom" center="xs" middle="xs">
-          <Col className="content" xs={12}>
+          <Col className="content" xs={10}>
             <div className="block">
               <div className="text">
                 <p className="hyphens">

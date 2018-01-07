@@ -35,12 +35,12 @@ class HeroSection extends React.Component {
           </h1>
 
           <Row className="ctas" center="xs" middle="xs">
-            <Col xs={12} sm={6} className="end-sm">
+            <Col xs={12} sm={6} last="xs" first="md" className="end-sm">
               <a className="btn cta light" onClick={this.watchVideo}>
                 learn more
               </a>
             </Col>
-            <Col xs={12} sm={6} className="start-sm">
+            <Col xs={12} sm={6} first="xs" last="md" className="start-sm">
               <a href="https://www.flowra.com/go" className="btn cta primary">
                 open flowra
               </a>

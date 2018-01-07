@@ -7,18 +7,20 @@ import './app-section.scss';
 class AppSection extends React.Component {
   render() {
     return <Row id="intro-app" className="concept white" center="xs" middle="xs">
-        <Col className="content">
+        <Col className="content" xs={12}>
           <div className="block" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
             <h2 className="headline jumbo">With a little help</h2>
 
-            <Row center="xs" top="xs">
-              <Col className="text" xs={12} sm={5}>
+            <Row around="xs" top="xs">
+              <Col className="text" xs={10} lg={5}>
                 <p>
-                  Use flowra to <span className="highlight">craft highly effective practice sessions</span> that will help you grow as a performer.
+                  Use flowra to <span className="highlight">
+                    craft highly effective practice sessions
+                  </span> that will help you grow as a performer.
                 </p>
               </Col>
 
-              <Col xs={12} sm={5}>
+              <Col xs={12} md={7} lg={5}>
                 <Chart name="inspired" />
               </Col>
             </Row>

@@ -16,13 +16,20 @@
     .practice-time {
       font-size: 2.1em;
 
-      p.highlight {
-        color: #fff;
-        background-color: #222233;
-        padding: 0.5em 1em;
-        margin-left: -1em;
-        margin-right: -1em;
+      ol {
+        border-radius: 5px;
+        color: white;
+        font-weight: 400;
+        // background-color: $light-purple;
+        background: linear-gradient(to top, $light-purple, #5192ff);
+        padding: 2em 3.5em;
         box-shadow: 0 0 10px #000;
+
+        li {
+          &:first-of-type {
+            margin-bottom: 1.5em;
+          }
+        }
       }
     }
   }
@@ -56,6 +63,16 @@
     .content {
       .practice-time {
         font-size: 1.3em;
+
+        ol {
+          padding: 1em 1em 1em 2em;
+
+          li {
+            &:first-of-type {
+              margin-bottom: 1em;
+            }
+          }
+        }
       }
     }
   }

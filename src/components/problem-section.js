@@ -13,11 +13,11 @@ class ProblemSection extends React.Component {
               Tired of practicing but not getting better?
             </h2>
 
-            <Row between="xs" top="xs">
-              <Col xs={12} sm={5}>
+            <Row around="xs" top="xs">
+              <Col xs={12} md={7} lg={5}>
                 <Chart name="uninspired" />
               </Col>
-              <Col className="text" xs={12} sm={5}>
+              <Col className="text" xs={10} lg={5}>
                 <p className="hyphens">
                   Your song performance stops to improve as soon as you run
                   out of clear practice tasks.

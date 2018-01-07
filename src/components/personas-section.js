@@ -19,14 +19,14 @@ class PersonasSection extends React.Component {
             </div>
 
             <Row center="xs" middle="xs">
-              <Col className="persona first-time" xs={12} sm={5}>
+              <Col className="persona first-time" xs={10} sm={5}>
                 <span className="sub">For first-time performers</span>
                 <strong className="headline">
                   Prepare for <br />your first gig
                 </strong>
               </Col>
 
-              <Col className="persona experienced" xs={12} sm={5}>
+              <Col className="persona experienced" xs={10} sm={5}>
                 <span className="sub">For experienced performers</span>
                 <strong className="headline">
                   Advance from<br />good to great

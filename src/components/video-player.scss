@@ -93,6 +93,10 @@ button.plyr__play-large {
     .video-player {
       @include intro-video-dimensions-responsive();
     }
+
+    .plyr {
+      border-radius: 0;
+    }
   }
 }
 
@@ -102,8 +106,5 @@ button.plyr__play-large {
 
 @media only screen and (min-width: 0) and (max-width: 600px) {
   .intro-video {
-    .plyr {
-      border-radius: 0;
-    }
   }
 }
