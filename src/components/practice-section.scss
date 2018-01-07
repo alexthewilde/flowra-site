@@ -18,15 +18,43 @@
 
       ol {
         border-radius: 4px;
-        color: #18FFFF;
         font-weight: 400;
         background: rgba(34,34,51,0.75); // #222233
-        padding: 2em 3.5em;
+        padding: 2em 2em 2em 3.5em;
         box-shadow: 0 0 10px #000;
 
         li {
+          font-size: 2em;
+          line-height: 1em;
+
+          &.find {
+            color: #1de9b6;
+            div {
+              background: linear-gradient(to right, #1de9b6, #5192ff);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+            }
+          }
+
+          &.deep {
+            color: #E040FB;
+            div {
+              background: linear-gradient(to right, #E040FB, #5192ff);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+            }
+          }
+
+          div {
+            margin-left: 0.3em;
+            font-size: .5em;
+            line-height: 1.3em;
+          }
+
           &:first-of-type {
-            margin-bottom: 1.5em;
+            margin-bottom: .5em;
           }
         }
       }
@@ -64,11 +92,11 @@
         font-size: 1.3em;
 
         ol {
-          padding: 1em 1em 1em 2em;
+          padding: 1em 1em 1em 3em;
 
           li {
             &:first-of-type {
-              margin-bottom: 1em;
+              margin-bottom: 0.2em;
             }
           }
         }

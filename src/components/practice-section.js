@@ -18,11 +18,11 @@ class PracticeSection extends React.Component {
                 The best performers are masters of effective practice:
               </p>
               <ol>
-                <li className="hyphens">
-                  Find something to improve in a performance
+                <li className="hyphens find">
+                  <div>Find something to improve in a performance</div>
                 </li>
-                <li className="hyphens">
-                  Focus rigorously until you master all details
+                <li className="hyphens deep">
+                  <div>Deep practice until you master all details</div>
                 </li>
               </ol>
               <p className="hyphens">
