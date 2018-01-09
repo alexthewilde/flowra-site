@@ -10,7 +10,7 @@ class FeaturesSection extends React.Component {
   // block - margin-top:0
   render() {
     return <div id="intro-video">
-        <Row className="concept white top" center="xs" middle="xs">
+        <Row className="concept white top" center="xs" middle="xs" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
           <Col className="content" xs={10}>
             <div className="block" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
               <h2 className="headline jumbo">Loop. Record. Compare.</h2>

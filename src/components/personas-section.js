@@ -9,8 +9,10 @@ class PersonasSection extends React.Component {
   render() {
     return <Row id="intro-personas" className="personas" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
         <Col className="content" xs>
-          <div data-scroll="toggle(.fromBottomIn, .fromBottomOut)" className="block">
-            <h2 className="headline jumbo">Get started</h2>
+          <div className="block">
+            <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+              Get started
+            </h2>
 
             <div className="call-to-action">
               <a href="https://www.flowra.com/go" className="btn cta primary">
@@ -18,7 +20,7 @@ class PersonasSection extends React.Component {
               </a>
             </div>
 
-            <Row center="xs" middle="xs">
+            <Row center="xs" middle="xs" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
               <Col className="persona first-time" xs={10} sm={5}>
                 <span className="sub">For first-time performers</span>
                 <strong className="headline">

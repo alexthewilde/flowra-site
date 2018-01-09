@@ -123,29 +123,27 @@
     Animate section contents
    */
 
+  .fromTopIn, .fromTopOut, .fromBottomIn, .fromBottomOut {
+    transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.2s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.2s;
+  }
+
   .fromTopIn {
-    transition: transform 1.0s ease, opacity 1.0s ease;
     transform: translate(0,0);
     opacity: 1.0;
   }
 
   .fromTopOut {
-    transition: transform 1.0s ease, opacity 1.0s ease;
-
-    transform: translate(0,-50px);
+    transform: translate(0,-20px);
     opacity: 0.0;
   }
 
   .fromBottomIn {
-    transition: transform 1.0s ease, opacity 1.0s ease;
-    transform: translate(0,0);
+    transform: translate(0,0) scale(1);
     opacity: 1.0;
   }
 
   .fromBottomOut {
-    transition: transform 1.0s ease, opacity 1.0s ease;
-
-    transform: translate(0,50px);
+    transform: translate(0,20px) scale(0.9);
     opacity: 0.0;
   }
 }

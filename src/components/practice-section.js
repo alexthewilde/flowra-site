@@ -8,13 +8,13 @@ class PracticeSection extends React.Component {
   render() {
     return <Row id="intro-practice" className="concept" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
         <Col id="start" className="content" xs={10} lg={8}>
-          <div className="block" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-            <h2 className="headline jumbo">
+          <div className="block">
+            <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
               Practice smarter,<br />not more
             </h2>
 
             <div className="practice-time">
-              <p className="hyphens">
+              <p className="hyphens" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
                 The best performers are masters of effective practice:
               </p>
               <ol>
@@ -22,12 +22,13 @@ class PracticeSection extends React.Component {
                   <div>Find something to improve in a performance</div>
                 </li>
                 <li className="hyphens deep">
-                  <div>Deep practice until you master all details</div>
+                  <div>
+                    Deep practice the part until you master all its details
+                  </div>
                 </li>
               </ol>
-              <p className="hyphens">
-                Over time, effective practice makes anyone grow from average
-                to outstanding performer.
+              <p className="hyphens" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+                Over time, practicing this way makes anyone grow from average to outstanding performer.
               </p>
             </div>
           </div>
