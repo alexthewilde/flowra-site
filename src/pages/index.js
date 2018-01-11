@@ -14,6 +14,8 @@ import AppSection from './../components/app-section';
 import FeaturesSection from './../components/features-section';
 import PersonasSection from './../components/personas-section';
 
+import Img from 'gatsby-image';
+
 class IndexPage extends React.Component {
   componentDidMount() {
     new ScrollTrigger({
@@ -26,17 +28,35 @@ class IndexPage extends React.Component {
   }
 
   render() {
-    return (
-      <Grid fluid id="intro">
-        <HeroSection />
+    return <Grid fluid id="intro">
+        <HeroSection bgImg={this.props.data.heroBg} />
         <ProblemSection />
-        <PracticeSection />
+        <PracticeSection bgImg={this.props.data.practiceBg} />
         <AppSection />
         <FeaturesSection />
-        <PersonasSection />
-      </Grid>
-    )
+        <PersonasSection bgImg={this.props.data.personasBg} />
+      </Grid>;
   }
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query IntroPageQuery {
+    heroBg: imageSharp(id: { regex: "/aurora-borelias/" }) {
+      sizes(maxWidth: 1500) {
+        ...GatsbyImageSharpSizes_withWebp
+      }
+    }
+    practiceBg: imageSharp(id: { regex: "/instruments/" }) {
+      sizes(maxWidth: 1500) {
+        ...GatsbyImageSharpSizes_withWebp
+      }
+    }
+    personasBg: imageSharp(id: { regex: "/concert/" }) {
+      sizes(maxWidth: 1500) {
+        ...GatsbyImageSharpSizes_withWebp
+      }
+    }
+  }
+`;

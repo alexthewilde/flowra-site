@@ -1,11 +1,11 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import { Row, Col } from 'react-flexbox-grid';
 
 import './hero-section.scss'
 
 import logoTransparent from '../images/flowra-logo-transparent.png'
 import logoWhite from '../images/flowra-logo-white.png'
-import bgImage from '../images/aurora-borelias.jpg'
 
 if (typeof window !== 'undefined') {
   // Pollyfill (required for Safari)
@@ -14,20 +14,21 @@ if (typeof window !== 'undefined') {
 
 class HeroSection extends React.Component {
   watchVideo() {
-    document
-      .querySelector('#start')
-      .scrollIntoView({
-        // Scroll exactly to top of target element
-        block: 'start',
-        inline: 'nearest',
-        behavior: 'smooth'
-      });
+    document.querySelector('#start').scrollIntoView({
+      // Scroll exactly to top of target element
+      block: 'start',
+      inline: 'nearest',
+      behavior: 'smooth'
+    });
   }
 
   render() {
-    return <Row id="intro-hero" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
+    return <Row id="intro-hero" center="xs" middle="xs">
+        <Img sizes={this.props.bgImg.sizes} outerWrapperClassName="bgImg" />
         <Col className="content" xs={12}>
-          <img src={logoTransparent} className="logo" />
+          <div className="logo-wrapper">
+            <img src={logoTransparent} className="logo" />
+          </div>
           <h1 className="headline">
             Effective practice that grows average into <span>
               stellar performers
@@ -47,7 +48,9 @@ class HeroSection extends React.Component {
             </Col>
           </Row>
 
-          <img src={logoWhite} className="logo-type" />
+          <div className="logo-type-wrapper">
+            <img src={logoWhite} className="logo-type" />
+          </div>
         </Col>
 
         <a className="scroll" onClick={this.watchVideo}>

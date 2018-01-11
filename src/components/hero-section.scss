@@ -9,9 +9,6 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
   background-color: $black-bg-color;
 
   .content {
@@ -52,12 +49,18 @@
       }
     }
 
-    img.logo {
-      width: 150px;
+    div.logo-wrapper, div.logo-type-wrapper {
+      display: inline-block;
     }
 
-    img.logo-type {
+    div.logo-wrapper, img.logo {
+      width: 150px;
+      height: 145.5px;
+    }
+
+    div.logo-type-wrapper, img.logo-type {
       width: 130px;
+      height: 60.5px;
     }
   }
 
@@ -136,6 +139,16 @@
         font-size: 1.8em;
         margin-top: 30px;
         margin-bottom: 20px;
+      }
+
+      div.logo-wrapper, img.logo {
+        width: 120px;
+        height: 116.5px;
+      }
+
+      div.logo-type-wrapper, img.logo-type {
+        width: 130px;
+        height: 42px;
       }
 
       img.logo {

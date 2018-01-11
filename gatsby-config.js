@@ -23,6 +23,15 @@ module.exports = {
         }
       }
     },
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`
+      }
+    },
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify` // Must be the last loaded plugin
   ]
 };

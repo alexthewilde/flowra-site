@@ -1,12 +1,13 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import { Row, Col } from 'react-flexbox-grid';
 
 import './practice-section.scss';
-import bgImage from '../images/instruments.jpg';
 
 class PracticeSection extends React.Component {
   render() {
-    return <Row id="intro-practice" className="concept" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
+    return <Row id="intro-practice" className="concept" center="xs" middle="xs">
+        <Img sizes={this.props.bgImg.sizes} outerWrapperClassName="bgImg" />
         <Col id="start" className="content" xs={10} lg={8}>
           <div className="block">
             <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">

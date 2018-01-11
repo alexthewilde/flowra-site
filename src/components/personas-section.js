@@ -1,13 +1,13 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import { Row, Col } from 'react-flexbox-grid';
 
 import './personas-section.scss';
 
-import bgImage from '../images/concert_bg.jpg';
-
 class PersonasSection extends React.Component {
   render() {
-    return <Row id="intro-personas" className="personas" style={{ backgroundImage: `url(${bgImage})` }} center="xs" middle="xs">
+    return <Row id="intro-personas" className="personas" center="xs" middle="xs">
+        <Img sizes={this.props.bgImg.sizes} outerWrapperClassName="bgImg" />
         <Col className="content" xs>
           <div className="block">
             <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
