@@ -16,7 +16,7 @@ class PracticeSection extends React.Component {
 
             <div className="practice-time">
               <Row center="xs">
-                <Col xs={10} lg={8}>
+                <Col xs={12} md={10} lg={8}>
                   <p className="hyphens" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
                     The best performers are masters of effective practice:
                   </p>
@@ -28,14 +28,14 @@ class PracticeSection extends React.Component {
                 </li>
                 <li className="hyphens deep">
                   <div>
-                    Deep practice the part until you master all its details
+                    Deep practice the part until you master it effortlessly
                   </div>
                 </li>
               </ol>
               <Row center="xs">
-                <Col xs={11} lg={10}>
+                <Col xs={11} md={12} lg={10}>
                   <p className="hyphens" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-                    Over time, effective practice habits make anyone grow beyond average.
+                    Over time, these effective practice habits make anyone grow beyond average.
                   </p>
                 </Col>
               </Row>

@@ -13,8 +13,8 @@ class AppSection extends React.Component {
               With a little help
             </h2>
 
-            <Row around="xs" top="xs">
-              <Col className="text" xs={10} lg={5} data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            <Row center="xs" around="lg" top="xs">
+              <Col className="text start-lg" xs={10} lg={5} data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
                 <p>
                   Use flowra to <span className="highlight">
                     craft highly effective practice sessions
