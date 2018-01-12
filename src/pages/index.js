@@ -44,17 +44,17 @@ export default IndexPage
 export const query = graphql`
   query IntroPageQuery {
     heroBg: imageSharp(id: { regex: "/aurora-borelias/" }) {
-      sizes(maxWidth: 1500) {
+      sizes(maxWidth: 1500, quality: 80) {
         ...GatsbyImageSharpSizes_withWebp
       }
     }
     practiceBg: imageSharp(id: { regex: "/instruments/" }) {
-      sizes(maxWidth: 1500) {
+      sizes(maxWidth: 1500, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp
       }
     }
     personasBg: imageSharp(id: { regex: "/concert/" }) {
-      sizes(maxWidth: 1500) {
+      sizes(maxWidth: 1500, quality: 90) {
         ...GatsbyImageSharpSizes_withWebp
       }
     }
