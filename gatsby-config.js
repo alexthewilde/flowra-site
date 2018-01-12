@@ -32,6 +32,13 @@ module.exports = {
       }
     },
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-112420589-1',
+        anonymize: true
+      }
+    },
     `gatsby-plugin-netlify` // Must be the last loaded plugin
   ]
 };
