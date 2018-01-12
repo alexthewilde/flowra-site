@@ -15,7 +15,8 @@ const TemplateWrapper = ({ children }) => (
       title="Flowra &ndash; Effective Practice"
       meta={[
         { name: 'description', content: 'Flowra effective music practice' },
-        { name: 'keywords', content: 'YouTube, practice, deep practice' }
+        { name: 'keywords', content: 'YouTube, practice, deep practice' },
+        { name: 'theme-color', content: '#222233' }
       ]}
       link={[
         {
