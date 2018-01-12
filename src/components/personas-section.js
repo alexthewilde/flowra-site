@@ -20,7 +20,7 @@ class PersonasSection extends React.Component {
               </a>
             </div>
 
-            <Row center="xs" middle="xs" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            <Row center="xs" top="xs" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
               <Col className="persona first-time" xs={10} sm={5}>
                 <span className="sub">For first-time performers</span>
                 <strong className="headline">

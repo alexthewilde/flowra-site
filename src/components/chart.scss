@@ -57,6 +57,8 @@ $white-icon-bg-color: #bfbfbf;
         padding: 10px 20px;
         border-radius: 10px;
         letter-spacing: 7px;
+        will-change: background-color;
+        transform: translate3d(0, 0, 0);
         animation: pumpingRed 1s ease-out infinite;
       }
     }
@@ -75,6 +77,8 @@ $white-icon-bg-color: #bfbfbf;
     .ct-line {
       stroke-width: 4px;
       stroke-dasharray: 5px;
+      will-change: stroke-dashoffset;
+      transform: translate3d(0, 0, 0);
       animation: dashoffset 1s linear infinite;
     }
 
