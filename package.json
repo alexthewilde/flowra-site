@@ -22,9 +22,7 @@
     "plyr": "^2.0.18",
     "react-flexbox-grid": "^2.0.0",
     "scrolltrigger-classes": "^0.3.6",
-    "smoothscroll-polyfill": "^0.4.0",
-    "typeface-questrial": "^0.0.44",
-    "typeface-quicksand": "^0.0.44"
+    "smoothscroll-polyfill": "^0.4.0"
   },
   "keywords": [
     "gatsby"

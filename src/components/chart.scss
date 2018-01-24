@@ -1,33 +1,29 @@
 @import "../css/variables";
 
-$dark-bg-color: #222233;
-$dark-label-color: #60608f;
-$dark-line-color: #414161;
-$dark-icon-bg-color: #363652;
-
-$white-bg-color: #fafafa;
-$white-label-color: #ccc;
-$white-line-color: #ccc;
-$white-target-line-color: #ccc;
-$white-icon-bg-color: #bfbfbf;
+$label-color: #ccc;
+$line-color: #ccc;
+$target-line-color: #ccc;
+$icon-bg-color: #bfbfbf;
 
 .intro-chart {
   color: white;
   position: relative;
+  padding: 1.5em 1em 1.5em 0;
 
   div.growth-chart {
-    width: 400px;
-    height: 300px;
+    margin:0 auto;
+    width: 380px;
+    height: 285px;
     position: relative;
 
     div.y-axis, div.x-axis {
       font-size: 1.3em;
-      color: $dark-label-color;
+      color: $label-color;
     }
 
     div.y-axis {
       position: absolute;
-      left:0px;
+      left:3px;
       top:50%;
 
       // Rotate by 90 degrees
@@ -42,31 +38,33 @@ $white-icon-bg-color: #bfbfbf;
       position: absolute;
       left:50%;
       transform: translateX(-30%);
-      bottom:-5px;
+      bottom:-2px;
     }
 
     div.stagnation {
       position: absolute;
       top: 20%;
       left: 73px;
+      @include font-semi-bold();
 
       span {
-        font-size: 2.2em;
+        line-height: 1.3em;
+        font-size: 2.1em;
         text-transform: uppercase;
-        color: $dark-bg-color;
-        padding: 10px 20px;
+        color: $white-bg;
+        padding: 14px 10px 10px 10px;
         border-radius: 10px;
         letter-spacing: 7px;
         will-change: background-color;
         transform: translate3d(0, 0, 0);
-        animation: pumpingRed 1s ease-out infinite;
+        animation: pumpingColor 1s ease-out infinite;
       }
     }
   }
 
   .chart {
     .ct-grid {
-      stroke: $dark-line-color;
+      stroke: $line-color;
       stroke-dasharray: none;
     }
 
@@ -96,6 +94,7 @@ $white-icon-bg-color: #bfbfbf;
     // Point replacements
 
     div.icon {
+      line-height: 1.3em;
       position: relative;
       border-radius: 50%;
       padding: 3px;
@@ -106,18 +105,18 @@ $white-icon-bg-color: #bfbfbf;
 
       span {
         position: absolute;
-        left: 31px;
-        top: 19px;
-        color: $dark-label-color;
+        left: 27px;
+        top: 21px;
+        color: $label-color;
       }
 
       i {
         font-size: 13px;
-        color: $dark-bg-color;
+        color: $white-bg;
       }
 
       &.check {
-        background-color: $dark-icon-bg-color;
+        background-color: $icon-bg-color;
 
         &.growing {
           background-color: $green;
@@ -125,10 +124,10 @@ $white-icon-bg-color: #bfbfbf;
       }
 
       &.question {
-        background-color: $red;
+        background-color: $violet;
 
         i {
-          color: $dark-bg-color;
+          color: $white-bg;
         }
       }
     }
@@ -141,98 +140,66 @@ $white-icon-bg-color: #bfbfbf;
 
   &.uninspired {
     .ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above {
-      stroke: $red;
+      stroke: $dark-purple-shade;
     }
 
     .ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
-      stroke: $dark-line-color;
+      stroke: $line-color;
     }
   }
 }
 
-/**
- * On white background
- */
-
-.white {
-  .intro-chart {
-    $growing-color: #5192ff;
-
-    div.growth-chart {
-      div.y-axis, div.x-axis {
-        color: $white-label-color;
-      }
+.intro-chart.inspired {
+  .chart {
+    .ct-area.ct-threshold-below {
+      fill: #ccc;
     }
 
-    .chart {
-      .ct-grid {
-        stroke: $white-line-color;
-      }
+    // Point replacements
 
-      .ct-area.ct-threshold-below {
-        fill: #ccc;
-      }
-
-      .ct-target-line {
-        stroke: $white-target-line-color;
-      }
-
-      // Point replacements
-
-      div.icon {
-        &.check {
-          background-color: $white-icon-bg-color;
-
-          i {
-            color: $white-bg-color;
-          }
-
-          &.growing {
-            background-color: $growing-color;
-          }
+    div.icon {
+      &.check {
+        &.growing {
+          background-color: $green;
         }
       }
     }
+  }
 
-    div.level-label {
-      position: absolute;
-      left: 61px;
-      color: $white-target-line-color;
-      font-size: 14px;
-      text-transform: uppercase;
-      font-weight: bold;
+  div.level-label {
+    position: absolute;
+    left: 61px;
+    color: $target-line-color;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
 
-      &.basic {
-        top: 142px;
-      }
-
-      &.excellent {
-        top: 23px;
-      }
+    &.basic {
+      top: 133px;
     }
 
-    &.inspired {
-      .ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above {
-        stroke: $growing-color;
-      }
+    &.excellent {
+      top: 23px;
+    }
+  }
 
-      .ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
-        stroke: $white-line-color;
-      }
+  &.inspired {
+    .ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above {
+      stroke: $green;
+    }
 
-      .ct-area.ct-threshold-above {
-        fill: $growing-color;
-      }
+    .ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
+      stroke: $line-color;
+    }
 
-      .chart {
-        div.icon {
-          &.question {
-            background-color: $white-icon-bg-color;
+    .ct-area.ct-threshold-above {
+      fill: $green;
+    }
 
-            i {
-              color: $white-bg-color;
-            }
-          }
+    .chart {
+      div.icon {
+        &.question {
+          background-color: $icon-bg-color;
         }
       }
     }
@@ -249,31 +216,17 @@ $white-icon-bg-color: #bfbfbf;
   }
 }
 
-@keyframes pumpingSize {
+@keyframes pumpingColor {
   0% {
-    font-size: 1em;
+    background-color: $dark-purple-shade;
   }
 
   50% {
-    font-size: 1.4em;
+    background-color: $violet;
   }
 
   100% {
-    font-size: 1em;
-  }
-}
-
-@keyframes pumpingRed {
-  0% {
-    background-color: $red;
-  }
-
-  50% {
-    background-color: $dark-red;
-  }
-
-  100% {
-    background-color: $red;
+    background-color: $dark-purple-shade;
   }
 }
 
@@ -294,10 +247,12 @@ $white-icon-bg-color: #bfbfbf;
 @media only screen and (min-width: 0) and (max-width: 600px) {
   .intro-chart {
     div.growth-chart {
-      width: 320px;
-      height: 240px;
+      width: 280px;
+      height: 210px;
 
       div.stagnation {
+        left: 60px;
+
         span {
           font-size: 1.5em;
           padding: 5px 10px;
@@ -310,12 +265,16 @@ $white-icon-bg-color: #bfbfbf;
         font-size: 1em;
       }
 
+      div.y-axis {
+        left: 12px;
+      }
+
       div.level-label {
         left: 58px;
         font-size: 12px;
 
         &.basic {
-          top: 110px;
+          top: 95px;
         }
 
         &.excellent {
@@ -326,12 +285,18 @@ $white-icon-bg-color: #bfbfbf;
 
     .chart {
       div.icon {
+        padding: 1px;
+
         span {
-          font-size: .9em;
+          font-size: .7em;
+          top: 14px;
+          left: 24px;
+        }
+
+        i {
+          font-size: 10px;
         }
       }
     }
   }
 }
-
-

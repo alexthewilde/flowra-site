@@ -16,21 +16,19 @@
 }
 
 .intro-video {
+  // TODO true rounded corners of <video> element requires a mask
+  // see https://stackoverflow.com/questions/6238451/rounded-corners-on-html5-video
   position: relative;
   @include intro-video-dimensions();
-  background: #fafafa;
   outline: none;
-  margin: 2em auto 0;
+  margin: 0 auto;
 
   .plyr {
     max-width: 1000px;
     width: 100%;
     max-height: 563px;
     height: 100%;
-    margin: 0 auto;
-    border-radius: 8px;
-    -webkit-box-shadow: 0 0 8px rgba(0,0,0,.3);
-    box-shadow: 0 0 8px rgba(0,0,0,.3);
+    border-radius: 10px;
 
     .plyr__video-wrapper {
       background: none;
@@ -92,10 +90,6 @@ button.plyr__play-large {
 
     .video-player {
       @include intro-video-dimensions-responsive();
-    }
-
-    .plyr {
-      border-radius: 0;
     }
   }
 }

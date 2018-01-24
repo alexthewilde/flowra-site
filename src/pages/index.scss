@@ -21,12 +21,17 @@
   }
 
   .headline {
-    font-family: "Questrial", Roboto, "Helvetica Neue", sans-serif;
+    @include font-bold();
     text-align: center;
+
+    // ss04: M
+    font-feature-settings: "salt", "ss04";
   }
 
-  .text {
-    font-size: 1.8em;
+  .box {
+    border-radius: 10px;
+    background-color: $white-bg; 
+    box-shadow: 0px 5px 20px $dark-purple;
   }
 
   /**
@@ -35,8 +40,11 @@
 
   a.cta {
     color: white;
+    @include font-semi-bold();
+    font-weight: normal;
     font-size: 14px;
     line-height: 1;
+
     border-radius: 500px;
     transition-property: background-color,border-color,color,box-shadow,filter,transform;
     transition-duration: .15s;
@@ -45,7 +53,6 @@
     min-width: 160px;
     text-transform: uppercase;
     white-space: normal;
-    font-weight: 600;
 
     &.light {
       background-color: transparent;
@@ -87,12 +94,12 @@
 
   .jumbo {
     font-weight: bold;
-    font-size: 4.4em;
+    font-size: 5em;
     margin-bottom: 1em;
   }
 
   .content {
-    max-width: 1000px;
+    max-width: 1400px;
     width: 100%;
     position: relative;
 
@@ -109,31 +116,9 @@
 
   .concept {
     width: 100%;
-    background-color: $black-bg-color;
-
-    &.white {
-      background-color: $white-bg-color;
-      color: $white-text;
-
-      .headline {
-        color: $white-headline;
-      }
-    }
 
     &.purple {
       background-color: $light-purple;
-      // color: $white-text;
-
-      .headline {
-        // color: $white-headline;
-      }
-    }
-
-    .content {
-      span.highlight {
-        color: black;
-        font-weight: 600;
-      }
     }
   }
 
@@ -172,6 +157,12 @@
 
 @media only screen and (min-width: 0px) and (max-width: 960px) {
   #intro {
+    .content {
+      .box {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+    }
   }
 }
 
@@ -183,10 +174,6 @@
   #intro {
     a.cta {
       box-sizing: border-box;
-    }
-
-    .text {
-      font-size: 1.3em;
     }
 
     .content {
@@ -202,59 +189,3 @@
     }
   }
 }
-
-/**
- * Browser fixes
- */
-
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body.firefox {
-  #intro {
-    .headline {
-      -moz-osx-font-smoothing: auto;
-      // NB FF also support this
-      -webkit-text-stroke: 0.02em;
-      letter-spacing: -0.015em;
-    }
-  }
-}
-
-body.safari {
-  #intro {
-    .headline {
-      -webkit-font-smoothing: auto;
-      -webkit-text-stroke: 0.04em;
-      letter-spacing: -0.01em;
-    }
-
-    p {
-      -webkit-text-stroke: 0.005em;
-    }
-  }
-
-  /* iPad */
-  @media only screen and (min-width: 601px) and (max-width: 960px) {
-    #intro {
-      .headline {
-        -webkit-text-stroke: 0.025em;
-        letter-spacing: -0.02em;
-      }
-    }
-  }
-
-
-  /* iPhone */
-  @media only screen and (min-width: 0) and (max-width: 600px) {
-    #intro {
-      .headline {
-        -webkit-text-stroke: 0.06em;
-        letter-spacing: -0.04em;
-      }
-    }
-  }
-}
-

@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
     return <Grid fluid id="intro">
         <HeroSection bgImg={this.props.data.heroBg} />
         <ProblemSection />
-        <PracticeSection bgImg={this.props.data.practiceBg} />
+        <PracticeSection />
         <AppSection />
         <FeaturesSection />
         <PersonasSection bgImg={this.props.data.personasBg} />
@@ -43,18 +43,13 @@ export default IndexPage
 
 export const query = graphql`
   query IntroPageQuery {
-    heroBg: imageSharp(id: { regex: "/aurora-borelias/" }) {
-      sizes(maxWidth: 1500, quality: 80) {
+    heroBg: imageSharp(id: { regex: "/instruments/" }) {
+      sizes(maxWidth: 1400, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp
       }
     }
-    practiceBg: imageSharp(id: { regex: "/instruments/" }) {
-      sizes(maxWidth: 1500, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
-      }
-    }
-    personasBg: imageSharp(id: { regex: "/concert/" }) {
-      sizes(maxWidth: 1500, quality: 90) {
+    personasBg: imageSharp(id: { regex: "/concert_bg/" }) {
+      sizes(maxWidth: 1400, quality: 90) {
         ...GatsbyImageSharpSizes_withWebp
       }
     }

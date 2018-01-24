@@ -52,15 +52,15 @@ const config = {
     fullWidth: true,
     stretch: true,
     showArea: false,
-    width: '400px',
-    height: '300px',
+    width: '380px',
+    height: '285px',
     axisX: { type: Chartist.StepAxis, ticks: [0, 1, 2, 3, 4, 5, 6] },
     plugins: [] // Set dynamically in drawChart()
   },
   responsiveChartOptions: [
     [
       'screen and (min-width: 0) and (max-width: 600px)',
-      { width: '320px', height: '240px' }
+      { width: '280px', height: '210px' }
     ]
   ],
   thresholdMiss: { low: 2.8, high: 3.1 }

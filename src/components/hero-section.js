@@ -29,10 +29,11 @@ class HeroSection extends React.Component {
           <div className="logo-wrapper">
             <img src={logoTransparent} className="logo" />
           </div>
-          <h1 className="headline">
-            Effective practice that grows average into <span>
-              stellar performers
-            </span>
+          <h1 className="headline" data-scroll="toggle(.hidden, .fadeIn)">
+            <div className="fadeIn">Practice with inspiration.</div>
+            <div className="fadeInLater">
+              Grow stellar performances.
+            </div>
           </h1>
 
           <Row className="ctas" center="xs" middle="xs">
@@ -48,9 +49,7 @@ class HeroSection extends React.Component {
             </Col>
           </Row>
 
-          <div className="logo-type-wrapper">
-            <img src={logoWhite} className="logo-type" />
-          </div>
+          <div className="logo-type-wrapper">flowra</div>
         </Col>
 
         <a className="scroll" onClick={this.watchVideo}>

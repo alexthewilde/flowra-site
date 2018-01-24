@@ -7,39 +7,39 @@ import './practice-section.scss';
 class PracticeSection extends React.Component {
   render() {
     return <Row id="intro-practice" className="concept" center="xs" middle="xs">
-        <Img sizes={this.props.bgImg.sizes} outerWrapperClassName="bgImg" />
-        <Col id="start" className="content" xs={10} lg={8}>
+        <Col id="start" className="content" xs={12}>
           <div className="block">
             <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-              Practice smarter,<br />not more
+              Practice smarter
             </h2>
 
-            <div className="practice-time">
-              <Row center="xs">
-                <Col xs={12} md={10} lg={8}>
-                  <p className="hyphens" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-                    The best performers are masters of effective practice:
-                  </p>
-                </Col>
-              </Row>
-              <ol>
-                <li className="hyphens find">
-                  <div>Find something to improve in a performance</div>
-                </li>
-                <li className="hyphens deep">
-                  <div>
-                    Deep practice the part until you master it effortlessly
-                  </div>
-                </li>
-              </ol>
-              <Row center="xs">
-                <Col xs={11} md={12} lg={10}>
-                  <p className="hyphens" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-                    Over time, these effective practice habits make anyone grow beyond average.
-                  </p>
-                </Col>
-              </Row>
-            </div>
+            <Row center="xs" around="lg" middle="xs">
+              <Col className="text start-lg" xs={10} lg={5} data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+                <p className="hyphens">
+                  You don't need to practice more to become better.
+                </p>
+                <p className="hyphens">
+                  Many of the best performers practice little – but
+                  effectively.
+                </p>
+                <p className="hyphens">
+                  The key to effective practice is inspiration and focus.
+                </p>
+              </Col>
+              <Col className="box" xs={10} md={7} lg={5}>
+                <ol>
+                  <li className="hyphens find">
+                    <div>Find something to improve in a performance</div>
+                  </li>
+                  <li className="hyphens deep">
+                    <div>
+                      Deep practice the part until you master it
+                      effortlessly
+                    </div>
+                  </li>
+                </ol>
+              </Col>
+            </Row>
           </div>
         </Col>
       </Row>;

@@ -9,33 +9,30 @@ class FeaturesSection extends React.Component {
   // video
   // block - margin-top:0
   render() {
-    return <div id="intro-video">
-        <Row className="concept white top" center="xs" middle="xs" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-          <Col className="content" xs={10}>
-            <div className="block" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-              <h2 className="headline jumbo">Loop. Record. Compare.</h2>
+    return <Row id="intro-video" className="concept" center="xs" middle="xs">
+        <Col className="content" xs={10}>
+          <div className="block">
+            <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+              Loop. Record. Compare.
+            </h2>
+            <div className="box top">
+              <VideoPlayer />
             </div>
-          </Col>
-        </Row>
-        <VideoPlayer />
-        <Row className="concept white bottom" center="xs" middle="xs">
-          <Col className="content" xs={10}>
-            <div className="block">
-              <div className="text">
-                <p className="hyphens">
-                  Flowra gives you all the tools you need for deep practice.
-                </p>
-              </div>
+            <div className="text">
+              <p className="hyphens">
+                Flowra gives you all the tools you need for effective
+                practice.
+              </p>
             </div>
-          </Col>
-        </Row>
-      </div>;
+          </div>
+        </Col>
+      </Row>;
   }
 }
 
 /* TODO Sticky header "Effective Practice = Inspiration + Flow + Structure" + Content sections */
 /*
-<div class="intro-features concept white" layout="column" layout-align="start center">
+<div class="intro-features concept" layout="column" layout-align="start center">
   <div id="sticky-header">
     <div class="header" layout="row" layout-align="center center">
       <span>Effective Practice</span>

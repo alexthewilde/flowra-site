@@ -1,20 +1,33 @@
 @import './base.scss';
+@import './variables.scss';
 
 html, button, select, textarea, input {
-  font-family: "Quicksand", Roboto, "Helvetica Neue", sans-serif;
-  font-weight: 500;
-  // Fix for too thin text on Safari
-  // -webkit-text-stroke: 0.5px;
+  @include font-semi-light();
+  font-weight: 100;
+  font-variant-ligatures: no-common-ligatures;
+
+  // salt: swoosh
+  // ss06: alternate a
+  // ss11: Cc
+  // ss12: Gg
+  font-feature-settings: "salt", "ss06", "ss11", "ss12";
 }
 
 html, body {
   height:100%;
   color: white;
   background-color: #222233;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p, li {
+  font-size: 2em;
   line-height: 1.5em;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 /**
@@ -49,4 +62,35 @@ p, li {
   & > .row {
     margin: 0;
   }
+}
+
+/**
+ * Small + Medium layout
+ */
+
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+  #intro {
+  }
+}
+
+/**
+ * Small layout
+ */
+
+@media only screen and (min-width: 0) and (max-width: 600px) {
+  #intro {
+    p, li {
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
+  }
+}
+
+/**
+ * Browser fixes
+ */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }

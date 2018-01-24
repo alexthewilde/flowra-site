@@ -5,43 +5,10 @@
  */
 
 #intro #intro-video {
-  &, .concept.top, .concept.bottom {
-    background-color: #f2f2f2;
-  }
+  background-color: $dark-purple-shade;
 
-  .top {
-    .content .block {
-      padding-bottom: 0;
-
-      .headline.jumbo {
-        margin-bottom: 0;
-        font-size: 4.1em;
-      }
-    }
-  }
-
-  .bottom {
-    .block {
-      padding-top: 0;
-    }
-  }
-
-  .headline {
-    color: #999;
-  }
-
-  .text {
-    color: #666;
+  div.text {
     text-align: center;
-  }
-}
-
-/**
- * Small + Medium layout
- */
-
-@media only screen and (min-width: 0px) and (max-width: 960px) {
-  .intro-features {
   }
 }
 

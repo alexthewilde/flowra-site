@@ -1,0 +1,69 @@
+/**
+ * Hurme Geometric Sans 1
+ */
+
+@font-face {
+  font-family: 'HurmeGeometricSans1-Light';
+  src: url('./../fonts/HurmeGeometricSans1-Light.eot');
+  src: url('./../fonts/HurmeGeometricSans1-Light.woff2') format('woff2'),
+       url('./../fonts/HurmeGeometricSans1-Light.woff') format('woff'),
+       url('./../fonts/HurmeGeometricSans1-Light.ttf') format('truetype'),
+       url('./../fonts/HurmeGeometricSans1-Light.svg#HurmeGeometricSans1-Light') format('svg'),
+       url('./../fonts/HurmeGeometricSans1-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-semi-light() {
+  font-family: 'HurmeGeometricSans1-Light' , 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+// (Not licensed)
+// 
+// @font-face {
+//   font-family: 'HurmeGeometricSans1-Regular';
+//   src: url('./../fonts/HurmeGeometricSans1-Regular.eot');
+//   src: url('./../fonts/HurmeGeometricSans1-Regular.woff2') format('woff2'),
+//        url('./../fonts/HurmeGeometricSans1-Regular.woff') format('woff'),
+//        url('./../fonts/HurmeGeometricSans1-Regular.ttf') format('truetype'),
+//        url('./../fonts/HurmeGeometricSans1-Regular.svg#HurmeGeometricSans1-Regular') format('svg'),
+//        url('./../fonts/HurmeGeometricSans1-Regular.eot?#iefix') format('embedded-opentype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @mixin font-regular() {
+//   font-family: 'HurmeGeometricSans1-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// }
+
+@font-face {
+  font-family: 'HurmeGeometricSans1-SemiBold';
+  src: url('./../fonts/HurmeGeometricSans1-SemiBold.eot');
+  src: url('./../fonts/HurmeGeometricSans1-SemiBold.woff2') format('woff2'),
+       url('./../fonts/HurmeGeometricSans1-SemiBold.woff') format('woff'),
+       url('./../fonts/HurmeGeometricSans1-SemiBold.ttf') format('truetype'),
+       url('./../fonts/HurmeGeometricSans1-SemiBold.svg#HurmeGeometricSans1-SemiBold') format('svg'),
+       url('./../fonts/HurmeGeometricSans1-SemiBold.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin font-semi-bold() {
+  font-family: 'HurmeGeometricSans1-SemiBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans1-Bold';
+  src: url('./../fonts/HurmeGeometricSans1-Bold.eot');
+  src: url('./../fonts/HurmeGeometricSans1-Bold.woff2') format('woff2'),
+       url('./../fonts/HurmeGeometricSans1-Bold.woff') format('woff'),
+       url('./../fonts/HurmeGeometricSans1-Bold.ttf') format('truetype'),
+       url('./../fonts/HurmeGeometricSans1-Bold.svg#HurmeGeometricSans1-Bold') format('svg'),
+       url('./../fonts/HurmeGeometricSans1-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin font-bold() {
+  font-family: 'HurmeGeometricSans1-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
