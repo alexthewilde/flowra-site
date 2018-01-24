@@ -16,10 +16,7 @@ class PracticeSection extends React.Component {
             <Row center="xs" around="lg" middle="xs">
               <Col className="text start-lg" xs={10} lg={5} data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
                 <p className="hyphens">
-                  You don't need to practice more to become better.
-                </p>
-                <p className="hyphens">
-                  Many of the best performers practice little – but
+                  You don't need to practice more to become better. In fact, many of the best performers practice little – but
                   effectively.
                 </p>
                 <p className="hyphens">
