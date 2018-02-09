@@ -37,8 +37,8 @@ class VideoPlayer extends React.Component {
           ref="video-player"
           controls
         >
-          <source src={videoMp4} type="video/mp4" />
           <source src={videoWebm} type="video/webm" />
+          <source src={videoMp4} type="video/mp4" />
           <a href={videoMp4} download>
             Download
           </a>
