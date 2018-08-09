@@ -2,7 +2,7 @@
 @import './variables.scss';
 
 html, button, select, textarea, input {
-  @include font-semi-light();
+  @include font-light();
   font-weight: 100;
   font-variant-ligatures: no-common-ligatures;
 

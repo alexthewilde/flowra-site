@@ -7,10 +7,10 @@ import './problem-section.scss';
 class ProblemSection extends React.Component {
   render() {
     return <Row id="intro-problem" className="concept" center="xs" middle="xs">
-        <Col id="start" className="content" xs={12}>
+        <Col className="content" xs={12}>
           <div className="block">
             <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-              Stuck?
+              Zero progress
             </h2>
 
             <Row center="xs" around="lg" middle="xs">

@@ -12,6 +12,7 @@ import ProblemSection from './../components/problem-section';
 import PracticeSection from './../components/practice-section';
 import AppSection from './../components/app-section';
 import FeaturesSection from './../components/features-section';
+import OpenCallout from './../components/open-callout';
 import PersonasSection from './../components/personas-section';
 
 import Img from 'gatsby-image';
@@ -30,10 +31,11 @@ class IndexPage extends React.Component {
   render() {
     return <Grid fluid id="intro">
         <HeroSection bgImg={this.props.data.heroBg} />
-        <ProblemSection />
-        <PracticeSection />
-        <AppSection />
         <FeaturesSection />
+        <OpenCallout />
+        <ProblemSection />
+        <AppSection />
+        <PracticeSection />
         <PersonasSection bgImg={this.props.data.personasBg} />
       </Grid>;
   }

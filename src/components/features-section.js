@@ -10,19 +10,19 @@ class FeaturesSection extends React.Component {
   // block - margin-top:0
   render() {
     return <Row id="intro-video" className="concept" center="xs" middle="xs">
-        <Col className="content" xs={10}>
+        <Col id="start" className="content" xs={10}>
           <div className="block">
             <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-              Loop. Record. Compare.
+              A flow machine
             </h2>
-            <div className="box top">
-              <VideoPlayer />
-            </div>
             <div className="text">
               <p className="hyphens">
-                Flowra gives you all the tools you need for effective
-                practice.
+                <span className="highlight">Loop. Record. Compare.</span><br/>
+                Flowra's powerful formula for creating a practice flow.
               </p>
+            </div>
+            <div className="box top">
+              <VideoPlayer />
             </div>
           </div>
         </Col>

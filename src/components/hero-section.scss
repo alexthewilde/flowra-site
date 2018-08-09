@@ -11,6 +11,43 @@
   width: 100%;
   background-color: $black-bg-color;
 
+  div.logo-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4em 0;
+    box-sizing: border-box;
+    background: linear-gradient(
+      hsl(0, 0%, 0%) 0%,
+      hsla(0, 0%, 0%, 0.738) 19%,
+      hsla(0, 0%, 0%, 0.541) 34%,
+      hsla(0, 0%, 0%, 0.382) 47%,
+      hsla(0, 0%, 0%, 0.278) 56.5%,
+      hsla(0, 0%, 0%, 0.194) 65%,
+      hsla(0, 0%, 0%, 0.126) 73%,
+      hsla(0, 0%, 0%, 0.075) 80.2%,
+      hsla(0, 0%, 0%, 0.042) 86.1%,
+      hsla(0, 0%, 0%, 0.021) 91%,
+      hsla(0, 0%, 0%, 0.008) 95.2%,
+      hsla(0, 0%, 0%, 0.002) 98.2%,
+      hsla(0, 0%, 0%, 0) 100%
+    );
+    text-align: center;
+
+    svg.logo {
+      width: 240px;
+      height: auto;
+      $color: white;
+      path {
+        fill: $color;
+      }
+      path#text {
+        stroke: $color;
+      }
+    }
+  }
+
   .content {
     width: 100%;
     padding: 2em;
@@ -21,12 +58,13 @@
     h1 {
       @include font-semi-bold();
       position: relative;
-      font-size: 4em;
+      font-size: 4.5em;
       line-height: 1.3em;
       letter-spacing: -1px;
       text-align: center;
       margin: 70px auto 30px;
       text-align: center;
+      color: #eee;
     }
 
     div.ctas {
@@ -35,24 +73,6 @@
       a {
         margin: 0 1em;
       }
-    }
-
-    div.logo-wrapper, div.logo-type-wrapper {
-      display: inline-block;
-    }
-
-    div.logo-wrapper, img.logo {
-      width: 150px;
-      height: 145.5px;
-    }
-
-    div.logo-type-wrapper {
-      @include font-semi-bold();
-      -webkit-text-stroke: 1px; 
-      font-feature-settings: "salt" 0, "ss08", "ss15";
-      font-size: 60px;
-      letter-spacing: -0.6px;
-      color: white;
     }
   }
 
@@ -109,62 +129,24 @@
   .fadeIn {
     opacity: 0;
     will-change: opacity;
-    -webkit-animation: fadeIn 1.5s;
-    animation: fadeIn 1.5s ease-out forwards;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s ease-out forwards;
     animation-delay: 1s;
-  }
-  .fadeInLater {
-    width:100%;
-    transform: translateY(-80%);
-    opacity: 0;
-    will-change: opacity, transform;
-    -webkit-animation: fadeInSlideIn 1s;
-    animation: fadeInSlideIn 1s forwards;
-    animation-delay: 2s;
   }
   @-webkit-keyframes fadeIn {
     0% {
       opacity: 0;
     }
-    50% {
-      opacity: 1;
-    }
     100% {
-      opacity: 0.5;
+      opacity: 1;
     }
   }
   @keyframes fadeIn {
     0% {
       opacity: 0;
     }
-    50% {
-      opacity: 1;
-    }
-    70% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.5;
-    }
-  }
-  @-webkit-keyframes fadeInSlideIn {
-    0% {
-      opacity: 0;
-      transform:translateY(-80%) scale(0.9);
-    }
     100% {
       opacity: 1;
-      transform:translateY(0%) scale(1);
-    }
-  }
-  @keyframes fadeInSlideIn {
-    0% {
-      opacity: 0;
-      transform:translateY(-80%) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform:translateY(0%) scale(1);
     }
   }
 }
@@ -179,7 +161,7 @@
       height:100%;
 
       h1 {
-        font-size: 3.3em;
+        font-size: 4em;
       }
     }
   }
@@ -191,11 +173,17 @@
 
 @media only screen and (min-width: 0) and (max-width: 600px) {
   #intro-hero {
+    div.logo-wrapper {
+      svg.logo {
+        width: 230px;
+      }
+    }
+
     .content {
       height:100%;
 
       h1 {
-        font-size: 1.6em;
+        font-size: 3em;
         margin-top: 30px;
         margin-bottom: 20px;
       }
@@ -235,10 +223,8 @@
 
 @media only screen and (min-width: 0) and (max-width: 360px) {
   #intro-hero {
-    .content {
-      h1 {
-        font-size: 1.5em;
-      }
+    div.logo-wrapper {
+      padding: 2em 0;
     }
   }
 }

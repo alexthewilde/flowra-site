@@ -5,10 +5,14 @@
  */
 
 #intro #intro-video {
-  background-color: $dark-purple-shade;
+  background-color: $light-purple-shade;
 
   div.text {
     text-align: center;
+
+    span.highlight {
+      @include font-semi-bold();
+    }
   }
 }
 
