@@ -19,13 +19,21 @@ import Img from 'gatsby-image';
 
 class IndexPage extends React.Component {
   componentDidMount() {
-    new ScrollTrigger({
+    var trigger = new ScrollTrigger({
       offset: {
         x: 0,
         y: 100
       },
       once: true
     }, document.body, window)
+
+    // Custom scroll callbacks
+    var scope = {};
+    scope.playVideo = function(value) {
+      this.play()
+    }
+
+    trigger.callScope = scope;
   }
 
   render() {

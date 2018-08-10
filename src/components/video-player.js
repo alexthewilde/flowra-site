@@ -36,6 +36,7 @@ class VideoPlayer extends React.Component {
           className="video-player"
           ref="video-player"
           controls
+          data-scroll data-scroll-showCallback="playVideo()"
         >
           <source src={videoWebm} type="video/webm" />
           <source src={videoMp4} type="video/mp4" />

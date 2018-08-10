@@ -8,7 +8,7 @@ import './../css/styles.scss';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Flowra &ndash; Effective Practice"
+      title="Flowra &ndash; Practice music in flow"
       meta={[
         { name: 'description', content: 'Flowra effective music practice' },
         { name: 'keywords', content: 'YouTube, practice, deep practice' },

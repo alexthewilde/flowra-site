@@ -17,8 +17,8 @@ class FeaturesSection extends React.Component {
             </h2>
             <div className="text">
               <p className="hyphens">
-                <span className="highlight">Loop. Record. Compare.</span><br/>
-                Flowra's powerful formula for creating a practice flow.
+                <span className="highlight">Loop. Record. Review.</span> –
+                All the tools for effective practice in one app.
               </p>
             </div>
             <div className="box top">
@@ -35,7 +35,7 @@ class FeaturesSection extends React.Component {
 <div class="intro-features concept" layout="column" layout-align="start center">
   <div id="sticky-header">
     <div class="header" layout="row" layout-align="center center">
-      <span>Effective Practice</span>
+      <span>Practice music in flow</span>
       <span>&nbsp;&nbsp;=&nbsp;&nbsp;</span>
       <span class="inspiration highlight">Inspiration&nbsp;&nbsp;</span>
       <span class="flow">+&nbsp;&nbsp;Flow&nbsp;&nbsp;</span>

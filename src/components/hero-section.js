@@ -48,7 +48,7 @@ class HeroSection extends React.Component {
 
         <Col className="content" xs={12}>
           <h1 className="headline" data-scroll="toggle(.hidden, .fadeIn)">
-            <div className="fadeIn">Make music flow.</div>
+            <div className="fadeIn">Practice music in flow.</div>
           </h1>
 
           <Row className="ctas" center="xs" middle="xs">
