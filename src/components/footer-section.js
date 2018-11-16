@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
 
-import './hero-section.scss'
+import './footer-section.scss'
 
 class FooterSection extends React.Component {
 	render() {
