@@ -10,7 +10,7 @@ class FooterSection extends React.Component {
 					<Row>
 						<Col xs={6}>
 							<p className="block">
-								<b>Contact</b><br /><br />
+								<strong>Contact</strong><br /><br />
 								Alexander Wilde<br />
 								Carrer Pujades 133<br />
 								08005 Barcelona, Spain<br />
@@ -21,8 +21,9 @@ class FooterSection extends React.Component {
 						</Col>
 						<Col xs={6}>
 							<p className="block">
-								<a href="./tos">Terms and Conditions</a><br />
-								<a href="./privacy">Privacy Policy</a>
+								<a href="./tos">Terms and Conditions</a><br /><br />
+								<a href="./privacy">Privacy Policy</a><br /><br />
+								<a href="./refund">Refund Policy</a>
 							</p>
 						</Col>
 					</Row>
