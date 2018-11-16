@@ -1,11 +1,12 @@
-#tos {
-  font-size: 0.5em;
+.terms {
+  font-size: 0.7em;
   max-width: 560px;
   margin: 80px auto;
 
-  p, a {
+  p, li, a {
     font-weight: bolder;
     color: #999;
+    font-size: 1.5em;
   }
 
   a {

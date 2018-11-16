@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import './tos.scss';
 
 const TOS = () => (
-  <div id="tos">
+  <div id="tos" className="terms">
     <div className="logo-wrapper">
       <svg
         className="logo"
