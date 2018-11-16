@@ -4,9 +4,6 @@ import { Row, Col } from 'react-flexbox-grid';
 
 import './hero-section.scss'
 
-import logoTransparent from '../images/flowra-logo-transparent.png'
-import logoWhite from '../images/flowra-logo-white.png'
-
 if (typeof window !== 'undefined') {
   // Pollyfill (required for Safari)
   require('smoothscroll-polyfill').polyfill();

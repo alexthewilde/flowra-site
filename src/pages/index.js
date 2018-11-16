@@ -14,6 +14,7 @@ import AppSection from './../components/app-section';
 import FeaturesSection from './../components/features-section';
 import OpenCallout from './../components/open-callout';
 import PersonasSection from './../components/personas-section';
+import FooterSection from './../components/footer-section'
 
 import Img from 'gatsby-image';
 
@@ -45,6 +46,7 @@ class IndexPage extends React.Component {
         <AppSection />
         <PracticeSection />
         <PersonasSection bgImg={this.props.data.personasBg} />
+        <FooterSection />
       </Grid>;
   }
 }

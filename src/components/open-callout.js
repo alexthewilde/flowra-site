@@ -17,8 +17,7 @@ class OpenCallout extends React.Component {
               </a>
             </div>
           </Col>
-        </Row>
-;
+        </Row>;
   }
 }
 
