@@ -15,6 +15,9 @@ class FooterSection extends React.Component {
 						<br />
 						Email: alex@flowra.com<br />
 						Tel.: +49 177 515 26 25
+						<br />
+						<br />
+						<a href="./tos">Terms and Conditions</a>
 					</p>
 				</Col>
 			</Row>;
