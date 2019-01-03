@@ -12,13 +12,15 @@ class FeaturesSection extends React.Component {
     return <Row id="intro-video" className="concept" center="xs" middle="xs">
         <Col id="start" className="content" xs={10}>
           <div className="block">
-            <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-              A flow machine
+            <h2 className="headline sub">
+              <div className="slideInLeft learn">
+                Learn from the best. <span className="highlight">Become a better performer.</span>
+              </div>
             </h2>
+
             <div className="text">
               <p className="hyphens">
-                <span className="highlight">Loop. Record. Review.</span> –
-                All the tools for effective practice in one app.
+                Flowra let&#39;s you practise a song line by line until you master it deeply.
               </p>
             </div>
             <div className="box top">

@@ -4,6 +4,15 @@ import { Row, Col } from 'react-flexbox-grid';
 import './footer-section.scss'
 
 class FooterSection extends React.Component {
+  goToTop() {
+    document.querySelector('#intro-hero').scrollIntoView({
+      // Scroll exactly to top of target element
+      block: 'start',
+      inline: 'nearest',
+      behavior: 'smooth'
+    });
+  }
+
 	render() {
 		return  <Row id="intro-footer" className="concept" center="xs" middle="xs">
 				<Col className="content" xs={10} sm={6}>
@@ -26,6 +35,16 @@ class FooterSection extends React.Component {
 								<a href="./refund">Refund Policy</a>
 							</p>
 						</Col>
+					</Row>
+
+					<Row>
+						<Col xs={12}>
+							<p className="block to-top">
+								<a className="btn cta light" onClick={this.goToTop}>
+									back to top
+								</a>
+							</p>
+ 						</Col>
 					</Row>
 				</Col>
 			</Row>;

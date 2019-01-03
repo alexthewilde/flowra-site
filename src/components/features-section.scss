@@ -11,18 +11,65 @@
     padding-top: 100px;
   }
 
+  h2.headline.sub {
+    font-size: 2.1em;
+    margin: -1.4em 0 1.4em 0;
+
+    span.highlight {
+      color: $green;
+    }
+  }
+
   h2.headline.jumbo {
     margin-bottom: 0.5em;
   }
 
   div.text {
     text-align: center;
+  }
 
-    span.highlight {
-      @include font-semi-bold();
+  .learn {
+    transform: translateY(-100%);
+    opacity: 0;
+    will-change: transform opacity;
+    -webkit-animation: slideInBottom 0.3s;
+    animation: slideInBottom 0.25s ease-out forwards;
+    animation-delay: 3.6s;
+  }
+  @-webkit-keyframes slideInBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
     }
   }
 }
+
+/**
+ * Small + Medium layout
+ */
+ @media only screen and (min-width: 0px) and (max-width: 960px) {
+  #intro #intro-video {
+    h2.headline.sub {
+      span.highlight {
+        display: block;
+      }
+    }
+  }
+ }
 
 /**
  * Small layout
@@ -33,5 +80,24 @@
     .top .content .block .headline.jumbo {
       font-size: 1.8em;
     }
+
+    h2.headline.sub {
+      font-size: 1.5em;
+      margin: -2.5em 0 2.5em 0;
+    }
   }
 }
+
+/**
+ * Tiny layout
+ */
+
+ @media only screen and (min-width: 0) and (max-width: 360px) {
+  #intro #intro-video {
+    h2.headline.sub {
+      font-size: 1.3em;
+      margin: -2.5em 0 2.5em 0;
+    }
+  }
+}
+
