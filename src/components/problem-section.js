@@ -10,7 +10,7 @@ class ProblemSection extends React.Component {
         <Col className="content" xs={12}>
           <div className="block">
             <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-              Zero progress
+              Overcome mediocrity
             </h2>
 
             <Row center="xs" around="lg" middle="xs">
