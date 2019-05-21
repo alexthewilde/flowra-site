@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
+import Link from 'gatsby-link';
 
 import './footer-section.scss'
 
@@ -30,9 +31,9 @@ class FooterSection extends React.Component {
 						</Col>
 						<Col xs={6}>
 							<p className="block">
-								<a href="./tos">Terms and Conditions</a><br /><br />
-								<a href="./privacy">Privacy Policy</a><br /><br />
-								<a href="./refund">Refund Policy</a>
+								<Link to="./tos">Terms and Conditions</Link><br /><br />
+								<Link to="./privacy">Privacy Policy</Link><br /><br />
+								<Link to="./refund">Refund Policy</Link>
 							</p>
 						</Col>
 					</Row>
