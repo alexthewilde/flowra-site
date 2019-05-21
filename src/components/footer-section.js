@@ -31,9 +31,9 @@ class FooterSection extends React.Component {
 						</Col>
 						<Col xs={6}>
 							<p className="block">
-								<Link to="./tos">Terms and Conditions</Link><br /><br />
-								<Link to="./privacy">Privacy Policy</Link><br /><br />
-								<Link to="./refund">Refund Policy</Link>
+								<a href="/about/tos/">Terms and Conditions</a><br /><br />
+								<a href="/about/privacy/">Privacy Policy</a><br /><br />
+								<a href="/about/refund/">Refund Policy</a>
 							</p>
 						</Col>
 					</Row>

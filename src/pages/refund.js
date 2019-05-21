@@ -38,7 +38,7 @@ const Refund = () => (
 
     <p>If you have any questions about our Returns and Refunds Policy, please contact us via email at alex@flowra.com.</p>
 
-    <Link to="/">Back to main page</Link>
+    <a href="/about/">Back to main page</a>
   </div>
 )
 
