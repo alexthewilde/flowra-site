@@ -22,8 +22,9 @@ class FooterSection extends React.Component {
 							<p className="block">
 								<strong>Contact</strong><br /><br />
 								Alexander Wilde<br />
-								Carrer Pujades 133<br />
-								08005 Barcelona, Spain<br />
+								c/o Inn.kubator<br />
+								Bahnhofstrasse 10<br />
+								94032 Passau, Germany<br />
 								<br />
 								Email: alex@flowra.com<br />
 								Tel.: +49 177 515 26 25

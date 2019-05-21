@@ -19,6 +19,9 @@ SEO ranking.
 To achieve this, our express.js server proxies requests for flowra.com/about/* to
 the netlify server. See `server.js`.
 
+Test serving the site locally through the proxy by opening
+`https://flowra.local:4000/about/`.
+
 ### Paths
 
 In order to serve the site from a subpath, we need to set `pathPrefix` in
