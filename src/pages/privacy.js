@@ -234,7 +234,7 @@ const TOS = () => (
     <h2>Contact Us</h2>
     <p>If you have any questions about this Privacy Policy, please contact us via email at alex@flowra.com</p>
 
-    <a href="/">Back to main page</a>
+    <Link to="/">Back to main page</Link>
   </div>
 )
 

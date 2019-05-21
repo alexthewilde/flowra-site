@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/about`,
   siteMetadata: {
     title: `Flowra`
   },
