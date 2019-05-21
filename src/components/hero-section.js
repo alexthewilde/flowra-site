@@ -36,7 +36,7 @@ class HeroSection extends React.Component {
             </svg>
             </Col>
             <Col xs={6} className="end-xs">
-              <a href="https://www.flowra.com/go" className="btn cta primary">
+              <a href="https://www.flowra.com/" className="btn cta primary">
                 open<span> flowra</span>
               </a>
             </Col>

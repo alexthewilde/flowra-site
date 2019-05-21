@@ -13,7 +13,7 @@ class PersonasSection extends React.Component {
             <h2 className="headline jumbo">Start now</h2>
 
             <div className="call-to-action">
-              <a href="https://www.flowra.com/go" className="btn cta primary">
+              <a href="https://www.flowra.com/" className="btn cta primary">
                 open flowra
               </a>
             </div>

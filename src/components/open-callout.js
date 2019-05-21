@@ -12,7 +12,7 @@ class OpenCallout extends React.Component {
                 Curious?
               </h2>
 
-              <a href="https://www.flowra.com/go" className="btn cta primary">
+              <a href="https://www.flowra.com/" className="btn cta primary">
                 open flowra
               </a>
             </div>
