@@ -50,6 +50,7 @@ module.exports = {
             "Cache-Control: public, max-age=604800",
           ]
         },
+        mergeCachingHeaders: true
       }
     }
   ]
