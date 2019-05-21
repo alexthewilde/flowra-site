@@ -40,17 +40,15 @@ module.exports = {
         anonymize: true
       }
     },
-    `gatsby-plugin-netlify`, // Must be the last loaded plugin
-    // make sure to put last in the array
     {
-      resolve: `gatsby-plugin-netlify-headers`,
+      resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
+          // Tell CloudFlare CDN to cache all pages and assets
           "/*": [
             "Cache-Control: public, max-age=604800",
           ]
-        },
-        mergeCachingHeaders: true
+        }
       }
     }
   ]
