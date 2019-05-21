@@ -16,11 +16,11 @@ class FooterSection extends React.Component {
 
 	render() {
 		return  <Row id="intro-footer" className="concept" center="xs" middle="xs">
-				<Col className="content" xs={10} sm={6}>
+				<Col className="content" xs={10} sm={8}>
 					<Row>
-						<Col xs={6}>
-							<p className="block">
-								<strong>Contact</strong><br /><br />
+						<Col xs={12} sm={6}>
+							<p className="block info">
+								<h3>Get in touch</h3>
 								Alexander Wilde<br />
 								c/o Inn.kubator<br />
 								Bahnhofstrasse 10<br />
@@ -30,11 +30,12 @@ class FooterSection extends React.Component {
 								Tel.: +49 177 515 26 25
 							</p>
 						</Col>
-						<Col xs={6}>
-							<p className="block">
+						<Col xs={12} sm={6}>
+							<p className="block links">
+								<h3>Our terms</h3>
 								<a href="/about/tos/">Terms and Conditions</a><br /><br />
 								<a href="/about/privacy/">Privacy Policy</a><br /><br />
-								<a href="/about/refund/">Refund Policy</a>
+								{/* <a href="/about/refund/">Refund Policy</a> */}
 							</p>
 						</Col>
 					</Row>

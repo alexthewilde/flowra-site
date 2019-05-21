@@ -5,14 +5,43 @@
  */
 
 #intro-footer {
-  font-size: 0.5em;
+  font-size: 0.7em;
 
   a {
     color: white;
     font-weight: bolder;
   }
 
+  p.block.info {
+    margin-right: 4em;
+  }
+
+  p.block.links {
+    margin-left: 4em;
+  }
+
   p.block.to-top {
     text-align: center;
+    padding-top: 0;
   }
 }
+
+/**
+ * Small layout
+ */
+
+@media only screen and (min-width: 0) and (max-width: 600px) {
+  #intro-footer {
+    font-size: 1.2em;
+
+    p.block.info {
+      margin-right: 0;
+    }
+
+    p.block.links {
+      margin-left: 0;
+      padding-top: 0;
+    }
+  }
+}
+
