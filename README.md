@@ -68,6 +68,10 @@ Even though Netlify provides SSL and CDN for the site, we want to use the Cloud-
 flare CDN for the static site too. This requires to overwrite the default caching
 header set by Netlify. See `gatsby-config.js`.
 
+After each deploy to Netlify, CloudFlare caches for https://www.flowra.com/about/
+must purged manually:
+https://dash.cloudflare.com/34c810028d21c4530aaebb584169c837/flowra.com/caching
+
 ## Build commands
 
 local development:

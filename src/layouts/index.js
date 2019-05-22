@@ -8,10 +8,10 @@ import './../css/styles.scss';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Flowra &ndash; Practice music in flow"
+      title="Flowra | Practice songs with inspiration"
       meta={[
-        { name: 'description', content: 'Flowra effective music practice' },
-        { name: 'keywords', content: 'YouTube, practice, deep practice' },
+        { name: 'description', content: 'Take your song performance to the next level. Grow from mediocre to stellar performer.' },
+        { name: 'keywords', content: 'practice, performer, singer, loop, record, YouTube, cover version' },
         { name: 'theme-color', content: '#222233' }
       ]}
       link={[
