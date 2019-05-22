@@ -8,10 +8,10 @@ import './../css/styles.scss';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Flowra | Practice songs with inspiration"
+      title="Flowra | Grow from mediocre to stellar performer"
       meta={[
-        { name: 'description', content: 'Take your song performance to the next level. Grow from mediocre to stellar performer.' },
-        { name: 'keywords', content: 'practice, performer, singer, loop, record, YouTube, cover version' },
+        { name: 'description', content: 'Take your song performance to the next level. &#x2713; Find inspiring cover versions &#x2713; Practice with lyrics &#x2713; Loop sections &#x2713; Record and compare your version' },
+        { name: 'keywords', content: 'practice, inspiration, performer, singer, loop, record, YouTube, cover version' },
         { name: 'theme-color', content: '#222233' }
       ]}
       link={[
