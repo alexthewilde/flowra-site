@@ -4,10 +4,6 @@ import plyr from 'plyr';
 import styles from 'plyr/dist/plyr.css';
 import './video-player.scss';
 
-import startFrame from '../images/video_start_frame.jpg';
-import videoMp4 from '../videos/intro.mp4';
-import videoWebm from '../videos/intro.webm';
-
 class VideoPlayer extends React.Component {
   shouldComponentUpdate() {
     return false;
@@ -32,14 +28,14 @@ class VideoPlayer extends React.Component {
     return (
       <div className="intro-video">
         <video
-          poster={startFrame}
+          poster={this.props.startFrame}
           className="video-player"
           ref="video-player"
           controls
         >
-          <source src={videoWebm} type="video/webm" />
-          <source src={videoMp4} type="video/mp4" />
-          <a href={videoMp4} download>
+          <source src={this.props.videoWebm} type="video/webm" />
+          <source src={this.props.videoMp4} type="video/mp4" />
+          <a href={this.props.videoMp4} download>
             Download
           </a>
         </video>

@@ -8,12 +8,12 @@
   background-color: $light-purple-shade;
 
   div.block {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 
   h2.headline.sub {
     font-size: 2.1em;
-    margin: -1.4em 0 1.4em 0;
+    margin: 1.4em 0 1.4em 0;
 
     span.highlight {
       color: $green;
@@ -63,6 +63,10 @@
  */
  @media only screen and (min-width: 0px) and (max-width: 960px) {
   #intro #intro-video {
+    div.block {
+      padding-top: 30px;
+    }
+
     h2.headline.sub {
       span.highlight {
         display: block;
@@ -83,7 +87,7 @@
 
     h2.headline.sub {
       font-size: 1.5em;
-      margin: -2.5em 0 2.5em 0;
+      margin: 2.5em 0 2.5em 0;
     }
   }
 }
@@ -96,7 +100,7 @@
   #intro #intro-video {
     h2.headline.sub {
       font-size: 1.3em;
-      margin: -2.5em 0 2.5em 0;
+      margin: 2.5em 0 2.5em 0;
     }
   }
 }

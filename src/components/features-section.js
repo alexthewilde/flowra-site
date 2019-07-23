@@ -4,6 +4,14 @@ import VideoPlayer from './video-player';
 
 import './features-section.scss';
 
+import alexStartFrame from '../images/alex_start_frame.jpg';
+import alexMp4 from '../videos/alex.mp4';
+import alexWebm from '../videos/alex.webm';
+
+import introStartFrame from '../images/intro_start_frame.jpg';
+import introMp4 from '../videos/intro.mp4';
+import introWebm from '../videos/intro.webm';
+
 class FeaturesSection extends React.Component {
   // block - margin-bottom:0
   // video
@@ -12,19 +20,24 @@ class FeaturesSection extends React.Component {
     return <Row id="intro-video" className="concept" center="xs" middle="xs">
         <Col id="start" className="content" xs={10}>
           <div className="block">
+            <div className="box top">
+              <VideoPlayer startFrame={alexStartFrame} videoMp4={alexMp4} videoWebm={alexWebm} />
+            </div>
+
             <h2 className="headline sub">
-              <div className="slideInLeft learn">
+              <div className="learn">
                 Learn from the best. <span className="highlight">Become a better performer.</span>
               </div>
             </h2>
 
             <div className="text">
               <p className="hyphens">
-                Flowra let&#39;s you practise a song line by line until you master it deeply.
+                Watch how Flowra works:
               </p>
             </div>
+
             <div className="box top">
-              <VideoPlayer />
+              <VideoPlayer startFrame={introStartFrame} videoMp4={introMp4} videoWebm={introWebm} />
             </div>
           </div>
         </Col>

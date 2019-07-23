@@ -41,11 +41,11 @@ class IndexPage extends React.Component {
     return <Grid fluid id="intro">
         <HeroSection bgImg={this.props.data.heroBg} />
         <FeaturesSection />
-        <OpenCallout />
+        <PersonasSection bgImg={this.props.data.personasBg} />
         <ProblemSection />
         <AppSection />
         <PracticeSection />
-        <PersonasSection bgImg={this.props.data.personasBg} />
+        <OpenCallout />
         <FooterSection />
       </Grid>;
   }

@@ -9,7 +9,7 @@ class OpenCallout extends React.Component {
           <Col className="content" xs={10}>
             <div className="block">
               <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-                Curious?
+                Ready?
               </h2>
 
               <a href="https://www.flowra.com/" className="btn cta primary">

@@ -1,32 +1,15 @@
 @import "../css/variables";
 
-@mixin intro-video-dimensions() {
-  max-width: 1000px;
-  width:100%;
-  // NB using a fixed height to prevent container from "jumping" on init
-  max-height: 563px;
-  min-height: 563px;
-}
-
-@mixin intro-video-dimensions-responsive() {
-  max-width: 1000px;
-  width:100%;
-  max-height: 563px;
-  min-height: initial;
-}
-
 .intro-video {
   // TODO true rounded corners of <video> element requires a mask
   // see https://stackoverflow.com/questions/6238451/rounded-corners-on-html5-video
   position: relative;
-  @include intro-video-dimensions();
+  width:100%;
   outline: none;
   margin: 0 auto;
 
   .plyr {
-    max-width: 1000px;
     width: 100%;
-    max-height: 563px;
     height: 100%;
     border-radius: 10px;
 
@@ -36,7 +19,7 @@
   }
 
   .video-player {
-    @include intro-video-dimensions();
+    width:100%;
   }
 }
 
@@ -86,11 +69,6 @@ button.plyr__play-large {
 
 @media only screen and (min-width: 0px) and (max-width: 960px) {
   .intro-video {
-    @include intro-video-dimensions-responsive();
-
-    .video-player {
-      @include intro-video-dimensions-responsive();
-    }
   }
 }
 

@@ -19,7 +19,7 @@ class FooterSection extends React.Component {
 				<Col className="content" xs={10} sm={8}>
 					<Row>
 						<Col xs={12} sm={6}>
-							<p className="block info">
+							<div className="block info">
 								<h3>Get in touch</h3>
 								Alexander Wilde<br />
 								c/o Inn.kubator<br />
@@ -28,15 +28,15 @@ class FooterSection extends React.Component {
 								<br />
 								Email: alex@flowra.com<br />
 								Tel.: +49 177 515 26 25
-							</p>
+							</div>
 						</Col>
 						<Col xs={12} sm={6}>
-							<p className="block links">
+							<div className="block links">
 								<h3>Our terms</h3>
 								<a href="/about/tos/">Terms and Conditions</a><br /><br />
 								<a href="/about/privacy/">Privacy Policy</a><br /><br />
 								{/* <a href="/about/refund/">Refund Policy</a> */}
-							</p>
+							</div>
 						</Col>
 					</Row>
 
