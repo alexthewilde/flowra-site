@@ -1,15 +1,11 @@
 @import "../css/variables";
 
 /**
- * Features
+ * Videos
  */
 
-#intro #intro-video {
+#intro .video-section {
   background-color: $light-purple-shade;
-
-  div.block {
-    padding-top: 80px;
-  }
 
   h2.headline.sub {
     font-size: 2.1em;
@@ -58,29 +54,49 @@
   }
 }
 
+#intro {
+  #alex-video-section {
+    div.content {
+      div.block {
+        padding-top: 80px;
+      }
+    }
+  }
+
+  #intro-video-section {
+    &.video-section {
+      background-color: $dark-purple-shade;
+    }
+  }
+}
+
 /**
  * Small + Medium layout
  */
- @media only screen and (min-width: 0px) and (max-width: 960px) {
-  #intro #intro-video {
-    div.block {
-      padding-top: 30px;
-    }
-
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+  #intro .video-section {
     h2.headline.sub {
       span.highlight {
         display: block;
       }
     }
   }
- }
+
+  #alex-video-section {
+    div.content {
+      div.block {
+        padding-top: 30px;
+      }
+    }
+  }
+}
 
 /**
  * Small layout
  */
 
 @media only screen and (min-width: 0) and (max-width: 600px) {
-  #intro #intro-video {
+  #intro .video-section {
     .top .content .block .headline.jumbo {
       font-size: 1.8em;
     }
@@ -97,7 +113,7 @@
  */
 
  @media only screen and (min-width: 0) and (max-width: 375px) {
-  #intro #intro-video {
+  #intro #video-section {
     h2.headline.sub {
       font-size: 1.3em;
       margin: 2.5em 0 2.5em 0;

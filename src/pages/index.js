@@ -11,7 +11,8 @@ import HeroSection from './../components/hero-section'
 import ProblemSection from './../components/problem-section';
 import PracticeSection from './../components/practice-section';
 import AppSection from './../components/app-section';
-import FeaturesSection from './../components/features-section';
+import AlexVideoSection from './../components/alex-video-section';
+import IntroVideoSection from './../components/intro-video-section';
 import OpenCallout from './../components/open-callout';
 import PersonasSection from './../components/personas-section';
 import FooterSection from './../components/footer-section'
@@ -40,7 +41,8 @@ class IndexPage extends React.Component {
   render() {
     return <Grid fluid id="intro">
         <HeroSection bgImg={this.props.data.heroBg} />
-        <FeaturesSection />
+        <AlexVideoSection />
+        <IntroVideoSection />
         <PersonasSection bgImg={this.props.data.personasBg} />
         <ProblemSection />
         <AppSection />
