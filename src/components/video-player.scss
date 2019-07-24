@@ -27,20 +27,17 @@
  * "Plyr" player customizations
  */
 
-button.plyr__play-large {
-  background: $purple;
-  border-color: $purple;
-  padding: 20px;
+.plyr--video {
+  button.plyr__control--overlaid {
+    background: $purple;
+    border-color: $purple;
+    padding: 20px;
 
-  svg {
-    width: 40px;
-    height: 40px;
-  }
-
-  &:hover {
-    cursor: pointer;
-    background: $light-purple;
-    border-color: $light-purple;
+    &:hover {
+      cursor: pointer;
+      background: $light-purple;
+      border-color: $light-purple;
+    }
   }
 }
 

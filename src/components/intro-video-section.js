@@ -4,14 +4,11 @@ import VideoPlayer from './video-player';
 
 import './video-section.scss';
 
-import introStartFrame from '../images/intro_start_frame.jpg';
-import introMp4 from '../videos/intro.mp4';
-import introWebm from '../videos/intro.webm';
+import startFrame from '../images/intro_start_frame.jpg';
+import mp4 from '../videos/intro.mp4';
+import webm from '../videos/intro.webm';
 
 class IntroVideoSection extends React.Component {
-  // block - margin-bottom:0
-  // video
-  // block - margin-top:0
   render() {
     return <Row id="intro-video-section" className="concept video-section" center="xs" middle="xs">
         <Col id="start" className="content" xs={10}>
@@ -23,7 +20,7 @@ class IntroVideoSection extends React.Component {
             </div>
 
             <div className="box top">
-              <VideoPlayer startFrame={introStartFrame} videoMp4={introMp4} videoWebm={introWebm} />
+              <VideoPlayer startFrame={startFrame} videoMp4={mp4} videoWebm={webm} />
             </div>
           </div>
         </Col>

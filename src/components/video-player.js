@@ -1,5 +1,5 @@
 import React from 'react';
-import plyr from 'plyr';
+import Plyr from 'plyr';
 
 import styles from 'plyr/dist/plyr.css';
 import './video-player.scss';
@@ -15,14 +15,21 @@ class VideoPlayer extends React.Component {
   }
 
   componentDidMount() {
-    // See https://github.com/sampotts/plyr/issues/254
-    this.player = plyr.setup(this.videoRef, {
+    const player = new Plyr(this.videoRef, {
       autoplay: false,
       showPosterOnEnd: true,
       // TODO video-overlay in fullscreen mode is hidden below player. Check
       // the :fullscreen CSS property in dev console
-      fullscreen: { enabled: true }
-    })[0];
+      captions: { active: true, language: 'auto' },
+      controls: [ 'play-large', 'play', 'progress', 'current-time', 'fullscreen' ],
+      volume: 1
+    })
+
+    player.on('play', () => {
+      // Make sure captions are visible and the video is audible on play
+      player.toggleCaptions(true);
+      player.volume = 1;
+    })
   }
 
   componentWillUnmount() {
@@ -40,6 +47,7 @@ class VideoPlayer extends React.Component {
         >
           <source src={this.props.videoWebm} type="video/webm" />
           <source src={this.props.videoMp4} type="video/mp4" />
+          {this.props.captions ? <track kind="captions" label="English" srcLang="en" src={this.props.captions} default></track> : null}
           <a href={this.props.videoMp4} download>
             Download
           </a>
