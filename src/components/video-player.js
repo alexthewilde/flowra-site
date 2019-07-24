@@ -5,13 +5,18 @@ import styles from 'plyr/dist/plyr.css';
 import './video-player.scss';
 
 class VideoPlayer extends React.Component {
+  constructor() {
+    super();
+    this.videoRef = null;
+  }
+
   shouldComponentUpdate() {
     return false;
   }
 
   componentDidMount() {
     // See https://github.com/sampotts/plyr/issues/254
-    this.player = plyr.setup(this.refs.videoPlayer, {
+    this.player = plyr.setup(this.videoRef, {
       autoplay: false,
       showPosterOnEnd: true,
       // TODO video-overlay in fullscreen mode is hidden below player. Check
@@ -30,7 +35,7 @@ class VideoPlayer extends React.Component {
         <video
           poster={this.props.startFrame}
           className="video-player"
-          ref="video-player"
+          ref={ref => this.videoRef = ref}
           controls
         >
           <source src={this.props.videoWebm} type="video/webm" />
