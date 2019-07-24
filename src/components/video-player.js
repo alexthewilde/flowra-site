@@ -26,8 +26,12 @@ class VideoPlayer extends React.Component {
     })
 
     player.on('play', () => {
-      // Make sure captions are visible and the video is audible on play
-      player.toggleCaptions(true);
+      // Make sure captions are visible
+      if (this.props.captions) {
+        player.toggleCaptions(true);
+      }
+
+      // Make sure video is audible
       player.volume = 1;
     })
   }
