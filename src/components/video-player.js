@@ -8,6 +8,7 @@ class VideoPlayer extends React.Component {
   constructor() {
     super();
     this.videoRef = null;
+    this.isMobile = window.innerWidth <= 768
   }
 
   shouldComponentUpdate() {
@@ -44,13 +45,13 @@ class VideoPlayer extends React.Component {
     return (
       <div className="intro-video">
         <video
-          poster={this.props.startFrame}
+          poster={this.isMobile && this.props.startFrameMobile ? this.props.startFrameMobile : this.props.startFrame}
           className="video-player"
           ref={ref => this.videoRef = ref}
           controls
         >
-          <source src={this.props.videoWebm} type="video/webm" />
-          <source src={this.props.videoMp4} type="video/mp4" />
+          <source src={this.isMobile && this.props.videoWebmMobile ? this.props.videoWebmMobile : this.props.videoWebm} type="video/webm" />
+          <source src={this.isMobile && this.props.videoMp4Mobile ? this.props.videoMp4Mobile : this.props.videoMp4} type="video/mp4" />
           {this.props.captions ? <track kind="captions" label="English" srcLang="en" src={this.props.captions} default></track> : null}
           <a href={this.props.videoMp4} download>
             Download
