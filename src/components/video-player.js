@@ -48,6 +48,7 @@ class VideoPlayer extends React.Component {
           poster={this.isMobile && this.props.startFrameMobile ? this.props.startFrameMobile : this.props.startFrame}
           className="video-player"
           ref={ref => this.videoRef = ref}
+          playsInline
           controls
         >
           <source src={this.isMobile && this.props.videoWebmMobile ? this.props.videoWebmMobile : this.props.videoWebm} type="video/webm" />
