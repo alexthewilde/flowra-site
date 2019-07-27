@@ -8,7 +8,7 @@ class VideoPlayer extends React.Component {
   constructor() {
     super();
     this.videoRef = null;
-    this.isMobile = window.innerWidth <= 768
+    this.isMobile = typeof window !== 'undefined' && window.innerWidth <= 768
   }
 
   shouldComponentUpdate() {
