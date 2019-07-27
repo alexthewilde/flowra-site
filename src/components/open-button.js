@@ -1,17 +1,20 @@
 import React from 'react';
-import URLSearchParams from 'url';
 
 class OpenButton extends React.Component {
   constructor() {
     super();
 
     let urlParams, returnPath = null;
-    if (typeof window != 'undefined') {
-      let urlParams = new URLSearchParams(window.location.search);
-      let returnPath = urlParams.get('r');
+    if (typeof window !== 'undefined') {
+      if (typeof URLSearchParams === 'undefined'){
+        URLSearchParams = require('url').URLSearchParams;
+      }
+
+      urlParams = new URLSearchParams(window.location.search);
+      returnPath = urlParams.get('r');
     }
     this.verb = returnPath ? 'back' : 'open';
-    this.object = returnPath ? ' to flowra' : 'flowra';
+    this.object = returnPath ? ' to flowra' : ' flowra';
     this.href = 'https://www.flowra.com' + (returnPath ? returnPath : '/');
   }
 
