@@ -3,6 +3,7 @@ import Img from 'gatsby-image';
 import { Row, Col } from 'react-flexbox-grid';
 
 import './hero-section.scss'
+import OpenButton from './open-button';
 
 if (typeof window !== 'undefined') {
   // Pollyfill (required for Safari)
@@ -59,9 +60,7 @@ class HeroSection extends React.Component {
               </a>
             </Col>
             <Col xs={6} className="end-xs">
-              <a href="https://www.flowra.com/" className="btn cta primary">
-                open<span> flowra</span>
-              </a>
+              <OpenButton />
             </Col>
           </Row>
         </div>

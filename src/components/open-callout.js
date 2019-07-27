@@ -3,6 +3,8 @@ import { Row, Col } from 'react-flexbox-grid';
 
 import './open-callout.scss';
 
+import OpenButton  from './open-button';
+
 class OpenCallout extends React.Component {
   render() {
     return  <Row id="open-callout" className="concept" center="xs" middle="xs">
@@ -12,9 +14,7 @@ class OpenCallout extends React.Component {
                 Ready?
               </h2>
 
-              <a href="https://www.flowra.com/" className="btn cta primary">
-                open flowra
-              </a>
+              <OpenButton />
             </div>
           </Col>
         </Row>;

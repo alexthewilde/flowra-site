@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import { Row, Col } from 'react-flexbox-grid';
+import OpenButton from './open-button';
 
 import './personas-section.scss';
 
@@ -13,9 +14,7 @@ class PersonasSection extends React.Component {
             <h2 className="headline jumbo">Start now</h2>
 
             <div className="call-to-action">
-              <a href="https://www.flowra.com/" className="btn cta primary">
-                open flowra
-              </a>
+              <OpenButton />
             </div>
 
             <Row center="xs" top="xs">
