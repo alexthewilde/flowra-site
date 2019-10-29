@@ -7,7 +7,7 @@ import './practice-section.scss';
 class PracticeSection extends React.Component {
   render() {
     return <Row id="intro-practice" className="concept" center="xs" middle="xs">
-        <Col id="start" className="content" xs={12}>
+        <Col id="practice" className="content" xs={12}>
           <div className="block">
             <h2 className="headline jumbo" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
               Practice smarter

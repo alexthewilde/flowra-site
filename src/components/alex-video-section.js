@@ -15,7 +15,7 @@ const captions = require('file-loader!../videos/alex.vtt');
 class AlexVideoSection extends React.Component {
   render() {
     return <Row id="alex-video-section" className="concept video-section" center="xs" middle="xs">
-        <Col id="start" className="content" xs={10}>
+        <Col id="alex" className="content" xs={10}>
           <div className="block">
             <div className="box top">
               <VideoPlayer

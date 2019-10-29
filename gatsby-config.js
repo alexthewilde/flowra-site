@@ -20,7 +20,7 @@ module.exports = {
         defaultDataLayer: {
           type: `object`,
           value: { pageCategory: `home` },
-        }
+        },
 
         // Specify optional GTM environment details.
         // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
