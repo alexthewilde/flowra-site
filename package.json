@@ -8,7 +8,7 @@
     "chartist-plugin-targetline": "^1.0.1",
     "chartist-plugin-threshold": "^0.0.2",
     "eslint": "^4.14.0",
-    "gatsby": "^1.9.279",
+    "gatsby": "^5.3.3",
     "gatsby-image": "^1.0.55",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-favicon": "^2.1.1",
